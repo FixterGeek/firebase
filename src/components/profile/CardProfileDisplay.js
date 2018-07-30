@@ -2,7 +2,7 @@ import React from 'react';
 import './Profile.css';
 import FontAwesome from 'react-fontawesome';
 
-export const CardProfileDisplay = ({}) => (
+export const CardProfileDisplay = () => (
 
     <div className="card_profile">
         <div className="photo_user">

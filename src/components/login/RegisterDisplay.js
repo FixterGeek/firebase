@@ -1,8 +1,8 @@
 import React from 'react';
 import './Login.css';
-import logo from '../../assets/firemx.png';
+//import logo from '../../assets/firemx.png';
 
-export const RegisterDisplay = ({}) => (
+export const RegisterDisplay = () => (
 
     <div className="registro">
         <div className="items">
