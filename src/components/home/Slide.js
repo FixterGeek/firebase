@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Home.css';
+import {Link} from 'react-router-dom';
 
 class Slide extends Component {
     render() {
@@ -11,9 +12,12 @@ class Slide extends Component {
                         <p>Move your career or your business forward with the rigth <br/>technology and right skills</p>
                         <br/>
                         <br/>
-                        <button className="btn_cupon">Explorar</button>
-
-                        <button className="btn_start">Empieza ya!</button>
+                        <Link to="/courses">
+                            <button className="btn_cupon">Explorar</button>
+                        </Link>
+                        <Link to="/login">
+                            <button className="btn_start">Empieza ya!</button>
+                        </Link>
                     </div>
                 </div>
             </div>

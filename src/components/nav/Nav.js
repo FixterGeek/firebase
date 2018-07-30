@@ -11,7 +11,9 @@ class Nav extends Component {
                     <img src={logo} alt="logo"/>
                 </Link>
                 <div>
-                    <button>Get started</button>
+                    <Link to="/courses">
+                        <button>Get started</button>
+                    </Link>
                     <hr/>
                     <Link to="/login">
                         <span>Log in</span>
