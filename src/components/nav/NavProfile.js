@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import './Nav.css';
 import logo from '../../assets/firemx.png';
 import FontAwesome from 'react-fontawesome';
-import { Menu, Dropdown, Icon } from 'antd';
+import { Menu, Dropdown,
+   //  Icon
+     } from 'antd';
 import {Link} from 'react-router-dom';
 
 const menu = (

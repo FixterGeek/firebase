@@ -3,7 +3,7 @@ import './Login.css';
 import logo from '../../assets/firemx.png';
 import {Link} from 'react-router-dom';
 
-export const LoginDisplay = ({}) => (
+export const LoginDisplay = () => (
 
     <div className="log">
         <div className="items">
