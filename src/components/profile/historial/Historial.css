@@ -1,0 +1,37 @@
+.historial{
+    background-color: #181818;
+    width:100%;
+    min-height: 100vh;
+    height:auto;
+    padding-bottom: 30px;
+}
+.tabla{
+    width:80%;
+    margin: 0 auto;
+}
+.ant-table-thead{
+}
+.ant-table{
+    color:#ccc !important;
+    background-color: transparent !important;
+}
+.ant-table-thead > tr > th{
+    color:#ccc !important;
+    background-color: transparent !important;
+
+}
+.ant-table-thead > tr.ant-table-row-hover > td,
+.ant-table-tbody > tr.ant-table-row-hover > td,
+.ant-table-thead > tr:hover > td,
+.ant-table-tbody > tr:hover > td {
+    /*background: rgba(255,167,17,.2) !important;*/
+    background: rgba(255,255,255,.2) !important;
+}
+
+.historial a{
+    color:#ccc !important;
+}
+.tittle{
+    color:white;
+    font-size: 24px;
+}

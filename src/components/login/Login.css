@@ -1,0 +1,128 @@
+.log{
+    width:100%;
+    height:100vh;
+    background-color: #181818;
+}
+.items{
+    width:100%;
+    height:100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.log_form{
+    width:400px;
+    flex-grow: 1;
+    background-color: #181818;
+}
+.log_img{
+    width:400px;
+    flex-grow: 1;
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://images.pexels.com/photos/517884/pexels-photo-517884.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+}
+.log_img {
+    height:100%;
+    color:white;
+    font-size:50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.log_img p{
+    margin-bottom: 0;
+}
+.logbox{
+    width:20%;
+    margin: 0 auto;
+}
+.logbox img{
+    width:100%;
+    height:auto;
+}
+.formulario{
+    width:80%;
+    margin: 0 auto;
+    color:#ccc;
+}
+.formulario input, .form_r input{
+    width:100%;
+    margin-bottom: 24px;
+    color:#ccc;
+    background: #181818;
+    border:1px solid #555;
+    height:40px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.formulario input::placeholder { font-size: 14px }
+.form_r input::placeholder { font-size: 14px }
+.formulario label, .form_r label{
+    margin-bottom: 4px;
+}
+.btn_signin{
+    background-color: #ffa711;
+    border: 1px solid #ffa711;
+    width:100%;
+    height:40px;
+    color:white;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+.or{
+    width:80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.divide{
+
+    flex: auto;
+    border: none;
+    height: 1px;
+    background-color: #aaa;
+}
+.btn_transparent{
+    background-color: transparent;
+    border: 1px solid white;
+    width:100%;
+    height:40px;
+    color:white;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+.forget{
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: center;
+    opacity: .5;
+}
+.forget a{
+    color:#ffa711;
+
+}
+
+/*REGISTRO*/
+
+.registro{
+    background-color: #181818;
+    width:100%;
+    height:100vh;
+    color:#ccc;
+}
+.form_registro{
+    width:;
+}
+.form_r{
+    width:80%;
+    margin: 0 auto;
+}
+.log a:hover, .registro a:hover{
+    color: #ffa711;
+}

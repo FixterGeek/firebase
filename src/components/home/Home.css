@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Raleway|Work+Sans');
+.slide{
+    width:100%;
+    height:100vh;
+    background-image: url('https://images.pexels.com/photos/32237/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
+    background-position: center;
+}
+.cover{
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0, .7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slide h1{
+    font-size: 50px;
+    color:white;
+}
+.slide p{
+    font-size: 24px;
+    margin: 30px 0;
+    font-family: 'Raleway', sans-serif;
+
+}
+.intro{
+    color:white;
+    text-align: center;
+}
+.btn_start{
+    background: transparent;
+    border: 1px solid white;
+    color:white;
+    height:40px;
+    width:250px;
+    /*font-weight: 700;*/
+    font-size: 16px;
+    margin: 5px 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+
+}
+.btn_cupon{
+    background-color: #ffa711;
+    border: 1px solid #ffa711;
+    color:white;
+    margin: 5px 20px;
+    height:40px;
+    width:250px;
+    /*font-weight: 700;*/
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+
+}
+
+/*ABOUT*/
+.about h2{
+    color:white;
+}
+.about{
+    width:100%;
+    padding: 70px 0;
+    background-color: black;
+    color:white;
+    text-align: left;
+
+}
+.flex{
+    width:80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.line_white{
+    width:30%;
+    margin-right: 70%;
+
+}
+
+.about_text, .about_img{
+    width:350px;
+    padding: 1%;
+    flex-grow: 1;
+
+}
+.about_img img{
+    width:50%;
+    margin-left: 50%;
+}
+.parrafo{
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+
+}
+.titulo{
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    line-height: 24px;
+    white-space: nowrap;
+}
+
+/*COURSES*/
+.cursos{
+    width: 100%;
+    padding: 70px 0;
+    background-color: black;
+    /*background-color: #181818;*/
+}
+.cursos h2{
+    text-align: center;
+    color:white;
+}
+.center{
+    justify-content: center;
+}
+/*STARTUPS*/
+.startups{
+    background-color: #f7f7f7;
+    height:auto;
+    width:100%;
+    padding: 30px 0 50px 0;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    line-height: 24px;
+    white-space: nowrap;
+    color:#a1a1a1;
+}
+.startups img{
+    max-width:200px;
+    filter: grayscale(100%);
+    opacity: .4;
+    margin: 0 20px;
+}

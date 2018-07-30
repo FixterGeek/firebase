@@ -1,0 +1,104 @@
+.nav{
+    width:100%;
+    height:70px;
+    position: fixed;
+    z-index: 999;
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+}
+.nav a, .nav a:hover, .nav a:focus{
+    color:inherit;
+}
+.nav img{
+    width:auto;
+    height:65px;
+    margin-left: 20px;
+}
+.nav div{
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-right: 20px;
+}
+.nav div button{
+    height:30px;
+    width:100px;
+    background-color: #ffa711;
+    border: 1px solid #ffa711;
+    color:white;
+}
+.nav hr{
+    height:30px;
+    opacity: .3;
+    margin: 0 15px;
+}
+
+/*NAVPERFIL*/
+
+.nav-perfil{
+    width:100%;
+    height:70px;
+    position: fixed;
+    z-index: 999;
+    background-color:#222;
+    display: flex;
+    justify-content: space-between;
+}
+.flexin img{
+    width:auto;
+    height:65px;
+    margin-left: 20px;
+}
+.flexin, .user_nav{
+    display: flex;
+    align-items: center;
+}
+.flexin div{
+    display: flex;
+    align-items: center;
+    width:250px;
+    color:#ccc;
+    background: #363636;
+    border:1px solid #363636;
+    height:40px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 0 20px;
+    font-weight: 500;
+}
+.flexin div span{
+    font-size: 18px;
+    margin: 0 10px;
+}
+.flexin div input{
+    background-color: transparent;
+    width:100%;
+    border: none;
+    padding-left: 10px;
+
+}
+.flexin div input::placeholder { font-size: 14px }
+.img_nav{
+    width:40px;
+    height:40px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: gray;
+    margin: 0 10px;
+}
+.img_nav img{
+    width:100%;
+}
+.user_nav{
+    color:#ccc;
+    margin-right: 20px;
+}
+.user_nav span{
+    font-size: 24px;
+    cursor: pointer;
+}
+.user_nav p{
+    margin-top: 17px;
+    font-size: 18px;
+}

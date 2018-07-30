@@ -1,0 +1,29 @@
+.modules-container{
+    display:flex;
+    justify-content: center;
+
+}
+
+.module-item{
+    padding: 8px;
+    border: 2px solid grey;
+    cursor: grab;
+    margin: 5px;
+}
+
+.module-item:active{
+    cursor: grabbing;
+}
+
+.resource-item{
+    padding: 8px;
+    border-radius: 5px;
+    border: 2px solid grey;
+    cursor: grab;
+    margin-bottom: 5px;
+    background-color: white;
+}
+
+.resource-item:active{
+    cursor: grabbing;
+}

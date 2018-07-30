@@ -1,0 +1,55 @@
+.perfil{
+    background-color: #181818;
+    width:100%;
+    height:auto;
+    padding-bottom: 30px;
+}
+/*CARD*/
+.card_profile{
+    width:300px;
+    background-color:#222;
+    max-height:400px;
+    padding: 2% 2%;
+    box-sizing: border-box;
+    color:#ccc;
+    margin: 15px 10px;
+}
+.photo_user{
+    margin: 0 auto;
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.photo_user img{
+    width:100%;
+}
+.mg{
+    padding-top: 100px;
+}
+.user_name{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.user_job{
+    margin: 0;
+    font-size: 14px;
+    opacity: .5;
+}
+.perfil_cursos{
+    width:500px;
+    flex-grow: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin: 0 10px;
+}
+.fl{
+    width:80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
