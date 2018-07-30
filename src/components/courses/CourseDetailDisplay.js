@@ -1,6 +1,6 @@
 import React from 'react';
 import './Courses.css';
-//import FontAwesome from 'react-fontawesome';
+import FontAwesome from 'react-fontawesome';
 import Nav from '../nav/Nav';
 //import Card from '../card/Card';
 

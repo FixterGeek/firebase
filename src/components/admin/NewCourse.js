@@ -10,10 +10,10 @@ class NewCourse extends Component{
     state = {
         editModuleTitle:false,
         courseId:null,
-        modulesOrder:['1','2'],
+        modulesOrder:['10','20'],
         modules:{
-            "1":{
-                _id:'1',
+            "10":{
+                _id:'10',
                 title: 'Primer modulo',
                 materialsIds:['1'],
                 materials:{
@@ -24,8 +24,8 @@ class NewCourse extends Component{
                     }
                 }
             },
-            "2":{
-                _id:'2',
+            "20":{
+                _id:'20',
                 title: 'Segundo modulo',
                 materialsIds:['3','2'],
                 materials:{
@@ -119,6 +119,12 @@ class NewCourse extends Component{
         if( result.destination.droppableId === result.source.droppableId && 
             result.destination.index === result.source.index) return
         if(result.type === 'module') return this.reorderModules(result)
+        if(result.type === 'material') return this.reorderMateriasl(result)
+    }
+
+    reorderMateriasl = result => {
+        const {destination, source, draggableId} = result
+        const {modules} = this.state
     }
 
     reorderModules = ({destination, source, draggableId})=>{
