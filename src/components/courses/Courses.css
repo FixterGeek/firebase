@@ -47,3 +47,27 @@
     font-size: 16px;
     font-family: 'Nanum Gothic', sans-serif;
 }
+.clasificacion{
+    width:80%;
+    margin: 50px auto;
+}
+.titulin{
+    color:#ccc;
+    font-size: 24px;
+    margin: 0;
+}
+.linea{
+    background-color: #222;
+    height:1px;
+    border: none;
+}
+.clasificacion div{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height:50px;
+}
+.clasificacion span{
+    font-size: 25px;
+    color:#ccc;
+}
