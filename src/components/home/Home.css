@@ -62,7 +62,7 @@
 .about{
     width:100%;
     padding: 70px 0;
-    background-color: black;
+    background-color:#181818;
     color:white;
     text-align: left;
 
@@ -106,8 +106,8 @@
 .cursos{
     width: 100%;
     padding: 70px 0;
-    background-color: black;
-    /*background-color: #181818;*/
+    /*background-color: black;*/
+    background-color: #181818;
 }
 .cursos h2{
     text-align: center;

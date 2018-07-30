@@ -8,6 +8,7 @@ import Profile from './components/profile/Profile';
 import Historial from './components/profile/historial/Historial';
 import Courses from './components/courses/Courses';
 import {CourseDetailDisplay} from './components/courses/CourseDetailDisplay';
+import Eventos from './components/event/Eventos';
 
 const Routes = () => (
     <Switch>
@@ -18,6 +19,7 @@ const Routes = () => (
         <Route path="/profile/history" component={Historial}/>
         <Route exact path="/courses" component={Courses}/>
         <Route path="/courses/id" component={CourseDetailDisplay}/>
+        <Route path="/events" component={Eventos}/>
         {/* Admin  */}
         <Route path="/admin/courses/new" component={NewCourse} />
     </Switch>
