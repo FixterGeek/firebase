@@ -15,31 +15,60 @@ class NewCourse extends Component{
             "1":{
                 _id:'1',
                 title: 'Primer modulo',
-                materialsIds:['1']
+                materialsIds:['1'],
+                materials:{
+                    '1':{
+                        _id:'1',
+                        title:'Primer Video',
+                        video: 'link'
+                    }
+                }
             },
             "2":{
                 _id:'2',
                 title: 'Segundo modulo',
-                materialsIds:['2','3']
+                materialsIds:['3','2'],
+                materials:{
+                    "2":{
+                        _id:'2',
+                        title:'Lectura',
+                        video: 'link'
+                    },
+                    "3":{
+                        _id:'3',
+                        title:'Otro video',
+                        video: 'link'
+                    }
+                }
             }
         },
-        materials:{
-            "1":{
-                _id:'1',
-                title:'Primer Video',
-                video: 'link'
-            },
-            "2":{
-                _id:'2',
-                title:'Lectura',
-                video: 'link'
-            },
-            "3":{
-                _id:'3',
-                title:'Otro video',
-                video: 'link'
-            }
-        }
+        // materials:{
+        //     "1":{
+        //         _id:'1',
+        //         title:'Primer Video',
+        //         video: 'link'
+        //     },
+        //     "2":{
+        //         _id:'2',
+        //         title:'Lectura',
+        //         video: 'link'
+        //     },
+        //     "3":{
+        //         _id:'3',
+        //         title:'Otro video',
+        //         video: 'link'
+        //     }
+        // }
+    }
+
+    addResource = (material) => {
+        const {modules} = this.state
+        if(!modules[material.module].materialsIds) modules[material.module].materialsIds = []
+        modules[material.module].materialsIds.push(material._id)
+        if(!modules[material.module].materials) modules[material.module].materials = {}
+        modules[material.module].materials[material._id] = material
+        this.setState({modules})
+        this.saveCourse()
     }
 
     onEditModuleTitle = () => {
@@ -65,7 +94,7 @@ class NewCourse extends Component{
         //TODO: remove videos in db and storage
         delete modules[id]
         modulesOrder.splice(modulesOrder.indexOf(id),1)
-        console.log(id, modules, modulesOrder)
+        //console.log(id, modules, modulesOrder)
         this.setState({modules, modulesOrder})
         
         this.saveCourse()
@@ -119,6 +148,21 @@ class NewCourse extends Component{
         .catch(e=>console.log(e))
     }
 
+    componentWillMount(){
+        const id = this.props.match.params.id
+        if(this.props.match.params.id){
+            firebase.database().ref('cursos').child(id).once('value')
+            .then(snap=>{
+                //console.log(snap.val())
+                const modules = snap.val().modules
+                const modulesOrder = snap.val().modulesOrder
+                const courseId = snap.key
+                this.setState({modules, modulesOrder, courseId})
+            })
+            .catch(e=>console.log(e))
+        }
+    }
+
     render(){
         return(
             <DragDropContext
@@ -145,8 +189,19 @@ class NewCourse extends Component{
 
                     {this.state.modulesOrder.map((moduleId, index)=> {
                         const module = this.state.modules[moduleId]
-                        const materials = module.materialsIds.map(materialId => this.state.materials[materialId])
-                        return <Module removeModule={this.removeModule} onChange={this.onChangeModuleTitle} editModuleTitle={this.state.editModuleTitle} onEdit={this.onEditModuleTitle} index={index} key={module._id} {...module} materials={materials} />
+                        const materials = module.materialsIds && module.materials ? module.materialsIds.map(materialId => module.materials[materialId]) : []
+                        console.log(materials)
+                        return <Module
+                         addResource={this.addResource} 
+                         removeModule={this.removeModule} 
+                         onChange={this.onChangeModuleTitle} 
+                         editModuleTitle={this.state.editModuleTitle}
+                         onEdit={this.onEditModuleTitle} 
+                         index={index} 
+                         key={module._id} 
+                         {...module} 
+                         materials={materials}
+                          />
                     })}
                 </div>
                 </div>

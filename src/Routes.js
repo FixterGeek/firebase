@@ -19,6 +19,7 @@ const Routes = () => (
         <Route exact path="/courses" component={Courses}/>
         <Route path="/courses/id" component={CourseDetailDisplay}/>
         {/* Admin  */}
+        <Route path="/admin/courses/:id/edit" component={NewCourse} />
         <Route path="/admin/courses/new" component={NewCourse} />
     </Switch>
 );

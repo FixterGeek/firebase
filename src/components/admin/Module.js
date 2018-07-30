@@ -1,12 +1,14 @@
 import React from 'react'
 //import Resource from './Resource'
 import {Draggable} from 'react-beautiful-dnd'
-import { Card, Input } from 'antd';
+import { Card, Input, Button, Modal } from 'antd';
 import FontAwesome from 'react-fontawesome'
+import ResourceForm from './ResourceForm'
 
 
-export const Module = ({removeModule,onChange, editModuleTitle, index, _id, title, materials, onEdit}) => {
-        return(
+export const Module = ({addResource,removeModule,onChange, editModuleTitle, index, _id, title, materials, onEdit}) => {
+    console.log(materials)    
+    return(
             <div>
             <Draggable
                 draggableId={_id}
@@ -39,8 +41,9 @@ export const Module = ({removeModule,onChange, editModuleTitle, index, _id, titl
                         </div>
                         } 
                         style={{ width: 300 }}>
-                        {materials.map((m, index)=><p key={index} >{m.link}</p>)}
-                    </Card>,
+                        {materials.map((m, index)=><p key={index} >{m.title}</p>)}
+                        <ResourceForm addResource={addResource} module={{_id, title}} />
+                    </Card>
                 </div> 
             )}
            </Draggable>
@@ -52,3 +55,9 @@ export const Module = ({removeModule,onChange, editModuleTitle, index, _id, titl
 
 export default Module
    
+
+// <form onSubmit={addVideo} nativeValidated>  
+// <Input required placeholder="Nuevo Recurso" />
+// <input required type="file"/>
+// <input type="submit" />
+// </form>
