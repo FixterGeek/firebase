@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="646fad71-13c2-48de-a076-ac02b74a4150" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/card/Card.js" afterPath="$PROJECT_DIR$/src/components/card/Card.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/courses/CourseDetailDisplay.js" afterPath="$PROJECT_DIR$/src/components/courses/CourseDetailDisplay.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/courses/Courses.css" afterPath="$PROJECT_DIR$/src/components/courses/Courses.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/Home.css" afterPath="$PROJECT_DIR$/src/components/home/Home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/home/Slide.js" afterPath="$PROJECT_DIR$/src/components/home/Slide.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/nav/Nav.css" afterPath="$PROJECT_DIR$/src/components/nav/Nav.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/nav/Nav.js" afterPath="$PROJECT_DIR$/src/components/nav/Nav.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/firebase_kagFs1n.png" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -567,18 +561,18 @@
       <workItem from="1532757873251" duration="11085000" />
       <workItem from="1532886084491" duration="208000" />
       <workItem from="1532897771109" duration="15082000" />
-      <workItem from="1532922174876" duration="5772000" />
+      <workItem from="1532922174876" duration="5863000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32147000" />
+    <option name="totallyTimeSpent" value="32238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="23" width="1240" height="777" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
