@@ -27,6 +27,7 @@
     background-color: #ffa711;
     border: 1px solid #ffa711;
     color:white;
+    cursor: pointer;
 }
 .nav hr{
     height:30px;

@@ -4,7 +4,6 @@ import FontAwesome from 'react-fontawesome';
 import Nav from '../nav/Nav';
 import Card from '../card/Card';
 
-
 export const CourseDetailDisplay = ({}) => (
 
     <div className="courses">
@@ -29,6 +28,18 @@ export const CourseDetailDisplay = ({}) => (
                     </div>
                 </div>
             </div>
+
+        </div>
+        <div className="clasificacion">
+            <div >
+            <h2 className="titulin">Introducción</h2>   <FontAwesome name="angle-down"/></div>
+            <hr className="linea"/>
+            <div >
+                <h2 className="titulin">Contenido</h2>  <FontAwesome name="angle-down"/></div>
+            <hr className="linea"/>
+            <div>
+                <h2 className="titulin">Proyectos</h2>  <FontAwesome name="angle-down"/></div>
+            <hr className="linea"/>
 
         </div>
     </div>
