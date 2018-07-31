@@ -1,30 +1,52 @@
-import React, {Component} from 'react'
-import Resource from './Resource'
-import {Droppable} from 'react-beautiful-dnd'
+import React from 'react'
+//import Resource from './Resource'
+import {Draggable} from 'react-beautiful-dnd'
+import { Card, Input } from 'antd';
+import FontAwesome from 'react-fontawesome'
 
-class Module extends Component{
-    render(){
+
+export const Module = ({removeModule,onChange, editModuleTitle, index, _id, title, materials, onEdit}) => {
         return(
-            <div className="module-item">
-                <h3>{this.props.module.title}</h3>
-                <Droppable
-                    droppableId={this.props.module._id}>
-                    {provided=>(
-                        <div
-                            innerRef={provided.innerRef}
-                            {...provided.droppableProps} >
-                            {this.props.resources.map((r,index)=>{
-                                return <Resource index={index} key={r._id} {...r} />
-                            })}
-                            {provided.placeholder}
+            <div>
+            <Draggable
+                draggableId={_id}
+                index={index}
+            >
+            {(provided, snapshot)=>(
+                <div
+                {...provided.draggableProps}
+                {...provided.dragHandleProps}
+                ref={provided.innerRef}
+                >
+                    <Card 
+                        type={snapshot.isDragging ? 'inner':null}
+                        title={ index + 1 + '. ' + title} 
+                        extra={editModuleTitle ? 
+                            <div>
+                        <Input onPressEnter={onEdit} onChange={(e)=>onChange(e,_id)} value={title} placeholder="Titulo del modulo" /> 
+                        <a onClick={onEdit} href="#!">Terminar</a>
                         </div>
-
-                        )}
-
-                </Droppable>
-            </div>
+                        : 
+                        <div>
+                        <a onClick={onEdit} href="#!">Editar</a>
+                        <FontAwesome
+                            onClick={()=>removeModule(_id)}
+                            className='super-crazy-colors'
+                            name='trash'
+                            size='2x'
+                            style={{ cursor:"pointer", color:'red', marginLeft:5, textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+                        />
+                        </div>
+                        } 
+                        style={{ width: 300 }}>
+                        {materials.map((m, index)=><p key={index} >{m.link}</p>)}
+                    </Card>,
+                </div> 
+            )}
+           </Draggable>
+           </div> 
         )
-    }
+    
 }
 
 

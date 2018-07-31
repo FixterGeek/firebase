@@ -11,7 +11,7 @@ const columns = [{
 },{
     title: 'Título del curso',
     dataIndex: 'curso',
-    render: text => <a href="javascript:;">{text}</a>,
+    render: text => <a href="#!">{text}</a>,
 },
     {
     title: 'Fecha de compra',
@@ -37,13 +37,13 @@ const data = [{
     completado: '20%',
 }];
 
-const rowSelection = {
-    onChange: (selectedRowKeys, selectedRows) => {
-        console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
-    },
+// const rowSelection = {
+//     onChange: (selectedRowKeys, selectedRows) => {
+//         console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+//     },
 
-};
-export const HistorialDisplay = ({}) => (
+// };
+export const HistorialDisplay = () => (
 
     <div className="historial">
         <NavProfile />
