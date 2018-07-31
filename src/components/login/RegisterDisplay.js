@@ -22,7 +22,7 @@ export const RegisterDisplay = ({}) => (
                         <label htmlFor="">Repite tu password</label>
                         <input type="password" placeholder="Password"/>
                         <button className="btn_signin">Registrar</button>
-                        <p className="forget">Ya tienes una cuenta? <a href="/login">Has clic aquí</a></p>
+                        <p className="forget">¿Ya tienes una cuenta? <a href="/login">Has clic aquí</a></p>
                     </form>
                 </div>
             </div>

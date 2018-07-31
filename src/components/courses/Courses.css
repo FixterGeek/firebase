@@ -20,8 +20,13 @@
 
 .fl_curso{
     width:80%;
-    margin: 100px auto 0 auto;
+    margin: 0px auto 0 auto;
     color:white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.cursi{
     display: flex;
     flex-wrap: wrap;
 }
@@ -36,6 +41,16 @@
 .data_curso{
     max-width:700px;
 
+}
+.data_curso p{
+    margin-top: 0;
+    font-family: Helvetica;
+    font-weight: bolder;
+}
+.data_curso h2{
+    font-size: 24px;
+    font-family: 'Muli', sans-serif;
+    margin-bottom: -5px;
 }
 .btn_iniciar{
     background-color: #ffa711;

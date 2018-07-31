@@ -1,7 +1,75 @@
 .back-event{
     width: 100%;
     height:400px;
-    background-position: center ;
+    /*background-position: center ;*/
     background-size: cover;
-    background-image: url('https://images.pexels.com/photos/41951/solar-system-emergence-spitzer-telescope-telescope-41951.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-image: url('https://images.pexels.com/photos/131174/nature-milky-way-stars-space-131174.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+}
+.back-event h2{
+    margin: 0;
+    padding-top: 70px;
+}
+.fl_event{
+
+    width:80%;
+    margin: 0px auto;
+    padding: 50px 0;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*CARDEVENT*/
+.card_stream{
+    width: 500px;
+    /*flex-grow: 1;*/
+    height:360px;
+    background-size: cover;
+    background-position: center;
+    color:white;
+    margin: 20px 10px;
+    text-align: center;
+}
+.cubierta{
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,.7);
+    padding: 2% 5%;
+
+
+}
+.cubierta h2{
+    font-size: 24px;
+    color: white;
+}
+.flexini{
+    display: flex;
+    justify-content: center;
+}
+.flexini p{
+    font-size: 18px;
+}
+.event_line{
+    width:1px;
+    height:24px;
+    border: none;
+    margin: 0 10px;
+    background-color: white;
+}
+
+
+.card_event{
+    width: 200px;
+    /*flex-grow: 1;*/
+    height:360px;
+    background-size: cover;
+    background-position: center;
+    color:white;
+    margin: 20px 10px;
+    background-color: #222;
+
+}
+.alineado{
+    display: flex;
+    align-items: center;
 }

@@ -1,12 +1,20 @@
 .footer{
     background-color: #181818;
     height:auto;
-    padding: 30px 0;
+    padding: 30px 0 10px 0;
     color:white;
 
 }
 .footer h3{
     color:white;
+    font-family: 'Muli', sans-serif;
+    font-size: 18px;
+}
+.footer p{
+    font-family: "Helvetica";
+    font-weight: bolder;
+    margin-bottom: 0;
+    font-size: 16px;
 }
 .space{
     justify-content: space-between;
@@ -18,4 +26,14 @@
 .redes span{
     margin: 0 10px;
     font-size: 30px;
+}
+.footer a, .footer a:hover{
+    color:white;
+}
+.copy{
+    margin-top: 30px;
+    padding-top: 10px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.3);
+    color:#ccc;
 }

@@ -31,11 +31,20 @@
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 0;
+    font-family: 'Muli', sans-serif;
 }
 .user_job{
     margin: 0;
     font-size: 14px;
     opacity: .5;
+    font-family: Helvetica;
+    font-weight: bolder;
+
+}
+.user_descript{
+    margin-top: 10px;
+    font-family: Helvetica;
+    font-weight: bolder;
 }
 .perfil_cursos{
     width:500px;

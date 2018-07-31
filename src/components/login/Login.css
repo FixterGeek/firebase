@@ -34,6 +34,7 @@
 }
 .log_img p{
     margin-bottom: 0;
+    font-family: 'Muli', sans-serif;
 }
 .logbox{
     width:20%;
@@ -47,6 +48,12 @@
     width:80%;
     margin: 0 auto;
     color:#ccc;
+
+}
+.formulario label, .form_r label{
+    font-family: "Helvetica";
+    font-weight: bolder;
+    font-size: 16px;
 }
 .formulario input, .form_r input{
     width:100%;
@@ -57,6 +64,8 @@
     height:40px;
     padding-left: 10px;
     box-sizing: border-box;
+
+
 }
 .formulario input::placeholder { font-size: 14px }
 .form_r input::placeholder { font-size: 14px }
@@ -69,7 +78,7 @@
     width:100%;
     height:40px;
     color:white;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     cursor: pointer;
 }
@@ -93,7 +102,7 @@
     width:100%;
     height:40px;
     color:white;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     cursor: pointer;
 }
@@ -102,10 +111,12 @@
     margin: 10px 0;
     text-align: center;
     opacity: .5;
+    font-family: "Helvetica";
+
 }
 .forget a{
     color:#ffa711;
-
+    text-decoration: underline;
 }
 
 /*REGISTRO*/
@@ -125,4 +136,5 @@
 }
 .log a:hover, .registro a:hover{
     color: #ffa711;
+    text-decoration: underline;
 }

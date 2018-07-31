@@ -10,7 +10,8 @@ class About extends Component {
                     <div className="about_text">
                         <h2 className="titulo">What it is?</h2>
                         <hr className="line_white"/>
-                        <p className="parrafo">En s la plataforma en donde encontrarás todas las herramientas que
+
+                        <p className="parrafo">Es la plataforma en donde encontrarás todas las herramientas que
                         te ofrece Firebase: El backend as a service de Google, y su implementación
                         con distintas tecnologías.
                         </p>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Footer.css';
 import FontAwesome from 'react-fontawesome';
+import {Link} from 'react-router-dom';
 
 class Footer extends Component {
     render() {
@@ -10,9 +11,14 @@ class Footer extends Component {
                     <div className="footer_about">
                         <h3>FirebaseMex</h3>
                         <hr/>
+                        <br/>
                         <p>Sobre nosotros</p>
-                        <p>Eventos</p>
-                        <p>Contacto</p>
+                        <Link to="/events">
+                            <p>Eventos</p>
+                        </Link>
+                        <Link to="/contact">
+                            <p>Contacto</p>
+                        </Link>
                     </div>
                     <div className="redes">
                         <FontAwesome name="facebook-square"/>
@@ -22,7 +28,7 @@ class Footer extends Component {
                         <FontAwesome name="youtube"/>
                     </div>
                 </div>
-                <div style={{textAlign:"center"}}>
+                <div className="copy" >
                     <p>Copyright © 2016 - 2018 FirebaseMx All rights reserved
                     </p>
                 </div>
