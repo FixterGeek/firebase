@@ -11,10 +11,15 @@ export const ProfileDisplay = () => (
         <NavProfile />
         <div className="fl mg">
             <CardProfileDisplay />
-            <div className="perfil_cursos">
+            <div className="profile_cursos">
+                <Card/>
                 <Card />
+
+                <Card/>
                 <Card />
-                <Card />
+
+                <Card/>
+
 
             </div>
         </div>

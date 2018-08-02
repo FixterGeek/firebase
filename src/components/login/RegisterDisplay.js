@@ -11,7 +11,7 @@ export const RegisterDisplay = () => (
             </div>
             <div className="log_form">
                 <div className="form_r">
-                    <h2 className="tittle" style={{textAlign:"center"}}>Crea una cuenta</h2>
+                    <h2 style={{textAlign:"center"}}>Crea una cuenta</h2>
                     <form action="">
                         <label htmlFor="">UserName</label>
                         <input type="text" placeholder="Nickname"/>

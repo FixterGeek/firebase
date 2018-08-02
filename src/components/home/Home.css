@@ -58,13 +58,13 @@
 
 /*ABOUT*/
 .about h2{
-    color:white;
+    color:#ccc;
 }
 .about{
     width:100%;
     padding: 50px 0;
     background-color:#181818;
-    color:white;
+    color:#ccc;
     text-align: left;
 
 }
@@ -114,7 +114,7 @@
 }
 .cursos h2{
     text-align: center;
-    color:white;
+    color:#ccc;
     margin-bottom: 50px;
 }
 .center{
@@ -133,7 +133,7 @@
     color:#a1a1a1;
 }
 .startups img{
-    max-width:200px;
+    max-width:180px;
     filter: grayscale(100%);
     opacity: .4;
     margin: 0 20px;

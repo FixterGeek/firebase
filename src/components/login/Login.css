@@ -64,13 +64,14 @@
     height:40px;
     padding-left: 10px;
     box-sizing: border-box;
-
+    /*background-color: white;*/
 
 }
-.formulario input::placeholder { font-size: 14px }
-.form_r input::placeholder { font-size: 14px }
+.formulario input::placeholder { font-size: 14px;   opacity: .3; }
+.form_r input::placeholder { font-size: 14px;   opacity: .3; }
 .formulario label, .form_r label{
     margin-bottom: 4px;
+
 }
 .btn_signin{
     background-color: #ffa711;
@@ -121,6 +122,11 @@
 
 /*REGISTRO*/
 
+.registro h2{
+    color:#ccc;
+    font-size: 24px;
+    font-family: 'Muli', sans-serif;
+}
 .registro{
     background-color: #181818;
     width:100%;

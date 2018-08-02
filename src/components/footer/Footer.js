@@ -12,7 +12,9 @@ class Footer extends Component {
                         <h3>FirebaseMex</h3>
                         <hr/>
                         <br/>
-                        <p>Sobre nosotros</p>
+                        <Link to="/history">
+                            <p>Sobre nosotros</p>
+                        </Link>
                         <Link to="/events">
                             <p>Eventos</p>
                         </Link>
@@ -21,9 +23,15 @@ class Footer extends Component {
                         </Link>
                     </div>
                     <div className="redes">
-                        <FontAwesome name="facebook-square"/>
-                        <FontAwesome name="twitter-square"/>
-                        <FontAwesome name="github-square"/>
+                        <a href="https://www.facebook.com/firebasemexico/" target="blank">
+                            <FontAwesome name="facebook-square"/>
+                        </a>
+                        <a href="https://twitter.com/FirebaseMexico_" target="blank">
+                            <FontAwesome name="twitter-square"/>
+                        </a>
+                        <a href="https://www.linkedin.com/company/firebase-mexico/" target="blank">
+                            <FontAwesome name="github-square"/>
+                        </a>
                         <FontAwesome name="linkedin"/>
                         <FontAwesome name="youtube"/>
                     </div>

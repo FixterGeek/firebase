@@ -8,6 +8,10 @@ import Startups from './Startups';
 import Footer from '../footer/Footer';
 
 class HomeContainer extends Component {
+    componentDidMount () {
+        window.scroll(0, 0)
+    }
+
     render() {
         return (
             <div className="home">

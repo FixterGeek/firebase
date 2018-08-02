@@ -1,8 +1,10 @@
 import React from 'react';
 import './Courses.css';
-//import FontAwesome from 'react-fontawesome';
+import FontAwesome from 'react-fontawesome';
 import Nav from '../nav/Nav';
-//import Card from '../card/Card';
+import {CardVideo} from './CardVideoDisplay';
+
+
 
 export const CourseDetailDisplay = () => (
 
@@ -31,13 +33,24 @@ export const CourseDetailDisplay = () => (
 
         </div>
         <div className="clasificacion">
-            <div >
-            <h2 className="titulin">Introducción</h2>   <FontAwesome name="angle-down"/></div>
+            <div className="referencia">
+                <h2 className="titulin">Introducción</h2>   <FontAwesome name="angle-down"/>
+            </div>
+            <div className="fl_vidios">
+                <CardVideo />
+                <CardVideo />
+                <CardVideo />
+                <CardVideo />
+                <CardVideo />
+                <CardVideo />
+            </div>
             <hr className="linea"/>
-            <div >
+
+
+            <div  className="referencia">
                 <h2 className="titulin">Contenido</h2>  <FontAwesome name="angle-down"/></div>
             <hr className="linea"/>
-            <div>
+            <div  className="referencia">
                 <h2 className="titulin">Proyectos</h2>  <FontAwesome name="angle-down"/></div>
             <hr className="linea"/>
 

@@ -4,7 +4,8 @@
 }
 .card{
     background-color: white;
-    max-width:300px;
+    min-width: 280px;
+    max-width: 300px;
     flex-grow: 1;
     margin: 15px 10px;
     border-radius: 5px;

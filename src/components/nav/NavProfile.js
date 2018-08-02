@@ -8,12 +8,12 @@ import { Menu, Dropdown,
 import {Link} from 'react-router-dom';
 
 const menu = (
-    <Menu>
-        <Menu.Item key="0">
+    <Menu style={{fontFamily:"Helvetica", background:"#222"}}>
+        <Menu.Item key="0" >
             <a href="/profile">Perfil</a>
         </Menu.Item>
         <Menu.Item key="0">
-            <a href="/">Todos los Cursos</a>
+            <a href="/courses">Todos los Cursos</a>
         </Menu.Item>
         <Menu.Item key="1">
             <a href="/profile/history">Historial</a>

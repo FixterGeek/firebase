@@ -12,10 +12,10 @@ class Contacto extends Component {
         return (
             <div className="contacto">
                 <Nav />
-                <div className="cover">
+                <div className="cover ">
                     <div className="box_contact">
                         <h2>Let's make this official</h2>
-                        <p className="texto">Save a spot for us in your inbox to stay in the know.</p>
+                        <p className="texto">Te contactaremos lo antes posible</p>
                         <hr/>
                         <form action="">
                             <label htmlFor="">Nombre</label>
@@ -26,7 +26,7 @@ class Contacto extends Component {
                             <input type="password" placeholder="333 - 333 - 33 - 33"/>
                             <label htmlFor="">Mensaje</label>
                             <textarea type="password" placeholder="Escribe algo..."/>
-                            <button className="btn_signin">Registrar</button>
+                            <button className="btn_signin">Enviar</button>
                         </form>
                     </div>
                 </div>

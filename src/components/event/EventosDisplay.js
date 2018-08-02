@@ -1,11 +1,10 @@
 import React from 'react';
 import './Eventos.css';
-import FontAwesome from 'react-fontawesome';
 import Nav from '../nav/Nav';
 import {CardEvent} from './CardEvent';
 import {CardStream} from './CardStream';
 
-export const EventosDisplay = ({}) => (
+export const EventosDisplay = () => (
 
     <div className="courses">
         <Nav />

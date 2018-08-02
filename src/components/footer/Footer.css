@@ -2,11 +2,11 @@
     background-color: #181818;
     height:auto;
     padding: 30px 0 10px 0;
-    color:white;
+    color:#ccc;
 
 }
 .footer h3{
-    color:white;
+    color:#ccc;
     font-family: 'Muli', sans-serif;
     font-size: 18px;
 }
@@ -26,9 +26,10 @@
 .redes span{
     margin: 0 10px;
     font-size: 30px;
+
 }
 .footer a, .footer a:hover{
-    color:white;
+    color:#ccc;
 }
 .copy{
     margin-top: 30px;

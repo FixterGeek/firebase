@@ -109,3 +109,20 @@
     margin-top: 17px;
     font-size: 18px;
 }
+.ant-dropdown-menu-item > a, .ant-dropdown-menu-submenu-title > a, .ant-dropdown-menu-item, .ant-dropdown-menu-submenu-title {
+    color:#ccc !important;
+}
+.ant-dropdown-menu-item-divider, .ant-dropdown-menu-submenu-title-divider{
+    opacity:.1 !important;
+}
+
+.ant-dropdown-menu-item a:hover,
+.ant-dropdown-menu-submenu-title a:hover {
+    color:  #ffa711 !important;
+    background-color: transparent !important;
+}
+.ant-dropdown-menu-item:hover,
+.ant-dropdown-menu-submenu-title:hover {
+    color:  #ffa711!important;
+    background-color: transparent !important;
+}

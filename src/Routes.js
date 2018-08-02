@@ -7,9 +7,11 @@ import {RegisterDisplay} from './components/login/RegisterDisplay' ;
 import Profile from './components/profile/Profile';
 import Historial from './components/profile/historial/Historial';
 import Courses from './components/courses/Courses';
-import {CourseDetailDisplay} from './components/courses/CourseDetailDisplay';
+import CourseDetailContainer from './components/courses/CourseDetailContainer';
+import {ViewVideoDisplay} from './components/courses/ViewVideoDisplay';
 import Eventos from './components/event/Eventos';
 import Contacto from './components/contacto/Contacto';
+import HistoryDisplay from './components/history/HistoryContainer';
 
 const Routes = () => (
     <Switch>
@@ -19,9 +21,11 @@ const Routes = () => (
         <Route exact path="/profile" component={Profile}/>
         <Route path="/profile/history" component={Historial}/>
         <Route exact path="/courses" component={Courses}/>
-        <Route path="/courses/id" component={CourseDetailDisplay}/>
+        <Route  exact path="/courses/id" component={CourseDetailContainer}/>
+        <Route path="/courses/id/intro" component={ViewVideoDisplay}/>
         <Route path="/events" component={Eventos}/>
         <Route path="/contact" component={Contacto}/>
+        <Route path="/history" component={HistoryDisplay}/>
         {/* Admin  */}
         <Route path="/admin/courses/new" component={NewCourse} />
     </Switch>
