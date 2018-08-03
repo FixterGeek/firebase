@@ -41,7 +41,7 @@ export const LoginDisplay = ({emailLogin, googleLogin, facebookLogin}) => (
                         <button className="btn_signin">Log in</button>
                        
                     </form>
-                    <p className="forget">Olvidaste tu contrasena? <a href="/">Has clic aquí</a></p>
+                    <p className="forget">¿Olvidaste tu contraseña? <a href="/">Has clic aquí</a></p>
                     <br/>
                     <div className="or">
                         <hr className="divide"/> <span style={{margin:"0 10px"}}>Or</span>

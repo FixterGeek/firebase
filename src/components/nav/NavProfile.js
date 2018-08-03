@@ -15,12 +15,21 @@ const closeSession = () => {
 }
 
 const menu = (
+<<<<<<< HEAD
     <Menu>
         <Menu.Item key="0">
             <Link to="/profile">Perfil</Link>
         </Menu.Item>
         <Menu.Item key="0">
             <Link to="/">Todos los Cursos</Link>
+=======
+    <Menu style={{fontFamily:"Helvetica", background:"#222"}}>
+        <Menu.Item key="0" >
+            <a href="/profile">Perfil</a>
+        </Menu.Item>
+        <Menu.Item key="0">
+            <a href="/courses">Todos los Cursos</a>
+>>>>>>> f03b1c73a00ae81b194f1dceae8445402b8017a1
         </Menu.Item>
         <Menu.Item key="1">
             <Link to="/profile/history">Historial</Link>

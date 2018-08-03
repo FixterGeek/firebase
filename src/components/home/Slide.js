@@ -9,7 +9,7 @@ class Slide extends Component {
                 <div className="cover">
                     <div className="intro">
                         <h1>The Firebase Learning Platform</h1>
-                        <p>Move your career or your business forward with the rigth <br/>technology and right skills</p>
+                        <p>Change your life or your carrer with the rigth <br/>technology and right skills</p>
                         <br/>
                         <br/>
                         <Link to="/courses">

@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import './Courses.css';
-import {CoursesDisplay} from './CoursesDisplay';
+import './Eventos.css';
+import {EventosDisplay} from './EventosDisplay';
 
-class Courses extends Component {
+class Eventos extends Component {
+
     componentDidMount () {
         window.scroll(0, 0)
-    }
 
+
+    }
     render() {
         return (
             <div className="">
-                <CoursesDisplay />
+                <EventosDisplay />
             </div>
         );
     }
 }
 
-export default Courses;
+export default Eventos;

@@ -82,6 +82,7 @@ export class RegisterDisplay extends React.Component {
             </div>
             <div className="log_form">
                 <div className="form_r">
+<<<<<<< HEAD
                     <h2 className="tittle" style={{textAlign:"center"}}>Crea una cuenta con tu red social</h2>
 
                    <div style={{display:'flex'}}>
@@ -121,6 +122,20 @@ export class RegisterDisplay extends React.Component {
                        
                         <button className="btn_signin">Registrar</button>
                         <p className="forget">Ya tienes una cuenta? <Link to="/login">Has clic aquí</Link></p>
+=======
+                    <h2 style={{textAlign:"center"}}>Crea una cuenta</h2>
+                    <form action="">
+                        <label htmlFor="">UserName</label>
+                        <input type="text" placeholder="Nickname"/>
+                        <label htmlFor="">Email</label>
+                        <input type="text" placeholder="hola@firebase.mx"/>
+                        <label htmlFor="">Password</label>
+                        <input type="password" placeholder="Password"/>
+                        <label htmlFor="">Repite tu password</label>
+                        <input type="password" placeholder="Password"/>
+                        <button className="btn_signin">Registrar</button>
+                        <p className="forget">¿Ya tienes una cuenta? <a href="/login">Has clic aquí</a></p>
+>>>>>>> f03b1c73a00ae81b194f1dceae8445402b8017a1
                     </form>
                 </div>
             </div>

@@ -4,7 +4,8 @@
 }
 .card{
     background-color: white;
-    max-width:300px;
+    min-width: 280px;
+    max-width: 300px;
     flex-grow: 1;
     margin: 15px 10px;
     border-radius: 5px;
@@ -36,6 +37,7 @@
     margin: 30px 0;
     text-align: center;
     font-family: Helvetica;
+    font-weight: bolder;
 }
 .data{
     display: flex;
@@ -50,15 +52,18 @@
     color:#000;
     font-size: 13px;
     margin: 0;
+    font-family: 'Muli', sans-serif;
 }
 .duracion{
     color:rgba(0,0,0,.6);
     font-size: 12px;
     margin: 0;
+    font-family: Helvetica;
+    font-weight: bolder;
 }
 .autor_img{
-    width:30px;
-    height:30px;
-    border-radius: 15px;
+    width:34px;
+    height:34px;
+    border-radius: 17px;
     margin: 0 5px 0 0;
 }
