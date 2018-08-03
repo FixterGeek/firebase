@@ -3,8 +3,7 @@ import './Courses.css';
 import Nav from '../nav/Nav';
 import log from '../../assets/bootcamp.png';
 
-export const PayFormDisplay= () => (
-
+export const PayFormDisplay= ({course, pagar}) => (
     <div className="pay">
         <Nav />
         <div style={{padding:"130px 0 50px 0"}}>
@@ -48,21 +47,21 @@ export const PayFormDisplay= () => (
                 <div className="summary">
                     <div className="img_pay">
                         <img src={log} alt=""/>
-                        <h3>"Firebase Intro"</h3>
+                        <h3>{course.title || "Firebase Intro"}</h3>
                     </div>
                     <p>Resumen</p>
                     <hr/>
                     <div style={{display:"flex", justifyContent:"space-between"}}>
-                        <p>Precio</p><p>$29.00</p>
+                        <p>Precio</p><p>$1,250.00</p>
                     </div>
                     <div style={{display:"flex", justifyContent:"space-between"}}>
-                        <p>Descuento</p><p>$00.00</p>
+                        <p>Descuento</p><p>$250.00</p>
                     </div>
                     <hr/>
                     <div style={{display:"flex", justifyContent:"space-between"}}>
-                        <p>Total</p><p>$29.00</p>
+                        <p>Total</p><p>$1000.00</p>
                     </div>
-                    <button className="btn_signin">Pagar</button>
+                    <button onClick={pagar} className="btn_signin">Pagar</button>
                 </div>
             </div>
         </div>

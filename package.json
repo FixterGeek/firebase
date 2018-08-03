@@ -5,6 +5,8 @@
   "dependencies": {
     "antd": "^3.7.3",
     "firebase": "^5.3.0",
+    "firebase-admin": "^5.11.0",
+    "firebase-functions": "^2.0.2",
     "font-awesome": "^4.7.0",
     "react": "^16.4.1",
     "react-beautiful-dnd": "^8.0.5",
