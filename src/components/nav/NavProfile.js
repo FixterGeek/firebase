@@ -7,24 +7,35 @@ import { Menu, Dropdown,
      } from 'antd';
 import {Link} from 'react-router-dom';
 
+const pic = "https://secure.meetupstatic.com/photos/event/d/6/f/5/600_465595029.jpeg"
+
+
+const closeSession = () => {
+    localStorage.removeItem('user')
+}
+
 const menu = (
     <Menu>
         <Menu.Item key="0">
-            <a href="/profile">Perfil</a>
+            <Link to="/profile">Perfil</Link>
         </Menu.Item>
         <Menu.Item key="0">
-            <a href="/">Todos los Cursos</a>
+            <Link to="/">Todos los Cursos</Link>
         </Menu.Item>
         <Menu.Item key="1">
-            <a href="/profile/history">Historial</a>
+            <Link to="/profile/history">Historial</Link>
         </Menu.Item>
         <Menu.Divider />
-        <Menu.Item key="3">Cerrar Sesión</Menu.Item>
+        <Link to="/login">
+        <Menu.Item onClick={closeSession} key="3">Cerrar Sesión</Menu.Item>
+        </Link>
     </Menu>
 );
 
 class NavProfile extends Component {
     render() {
+        const {user} = this.props
+        const {photoURL, displayName} = user
         return (
             <div className="nav-perfil">
                 <div className="flexin">
@@ -37,9 +48,9 @@ class NavProfile extends Component {
                     </div>
                 </div>
                 <div className="user_nav">
-                    <p>Brendi Js</p>
+                    <p>{displayName}</p>
                     <div className="img_nav">
-                        <img src="https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/12118737_861839050578151_4085607276030940820_n.jpg?_nc_cat=0&oh=c34a4f61e314568bfd1ad4e8627a6a90&oe=5BC7B8A3" alt=""/>
+                        <img src={photoURL || pic} alt={displayName}/>
                     </div>
                     <Dropdown overlay={menu} trigger={['click']}>
                         <FontAwesome name="angle-down"/>

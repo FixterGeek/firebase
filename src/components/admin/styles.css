@@ -19,12 +19,14 @@
 }
 
 .resource-item{
-    padding: 8px;
+    padding: 5px;
     border-radius: 5px;
     border: 2px solid grey;
     cursor: grab;
     margin-bottom: 5px;
     background-color: white;
+    display: flex;
+    justify-content: space-between;
 }
 
 .resource-item:active{

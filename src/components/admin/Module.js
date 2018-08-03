@@ -9,8 +9,8 @@ import FontAwesome from 'react-fontawesome'
 import ResourceForm from './ResourceForm'
 
 
-export const Module = ({addResource,removeModule,onChange, editModuleTitle, index, _id, title, materials, onEdit}) => {
-    console.log(materials)    
+export const Module = ({courseId,removeResource, addResource,removeModule,onChange, editModuleTitle, index, _id, title, materials, onEdit}) => {
+    
     return(
             <div>
             <Draggable
@@ -32,7 +32,7 @@ export const Module = ({addResource,removeModule,onChange, editModuleTitle, inde
                         </div>
                         : 
                         <div>
-                        <a onClick={onEdit} href="#!">Editar</a>
+                        <a onClick={onEdit} >Editar</a>
                         <FontAwesome
                             onClick={()=>removeModule(_id)}
                             className='super-crazy-colors'
@@ -40,7 +40,13 @@ export const Module = ({addResource,removeModule,onChange, editModuleTitle, inde
                             size='2x'
                             style={{ cursor:"pointer", color:'red', marginLeft:5, textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
                         />
-                        <span {...provided.dragHandleProps}>...</span>
+                        <FontAwesome
+                            className='super-crazy-colors'
+                            name='minus-square'
+                            size='2x'
+                            style={{ cursor:"drag", color:'orange', marginLeft:5, textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+                            {...provided.dragHandleProps}
+                        />
                         </div>} 
                         style={{ width: 300 }} >
 
@@ -54,15 +60,18 @@ export const Module = ({addResource,removeModule,onChange, editModuleTitle, inde
                             <section 
                             {...provided.droppableProps}
                             ref={provided.innerRef}
-                            id="droppableArea">
+                            id="droppableArea"
+                            style={{minHeight:50}}
+                            >
                         
-                            {materials.map((m, index)=><Resource index={index} key={m._id} {...m} />)}
-    
+                            {materials.map((m, index)=><Resource removeResource={(resourceId)=>removeResource(resourceId, _id)} index={index} key={m._id} {...m} />)}
+                            
+                            {provided.placeholder}
                             </section>
                         )}
                         </Droppable>
 
-                        <ResourceForm addResource={addResource} module={{_id, title}} />
+                        <ResourceForm courseId={courseId} addResource={addResource} module={{_id, title}} />
                     </Card>
                 </div> 
             )}

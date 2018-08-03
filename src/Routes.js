@@ -8,6 +8,8 @@ import Profile from './components/profile/Profile';
 import Historial from './components/profile/historial/Historial';
 import Courses from './components/courses/Courses';
 import {CourseDetailDisplay} from './components/courses/CourseDetailDisplay';
+import CoursesPage from './components/admin/CoursesPage'
+import CourseDetail from './components/admin/CourseDetail'
 
 const Routes = () => (
     <Switch>
@@ -21,6 +23,8 @@ const Routes = () => (
         {/* Admin  */}
         <Route path="/admin/courses/:id/edit" component={NewCourse} />
         <Route path="/admin/courses/new" component={NewCourse} />
+        <Route exact path="/admin/courses/" component={CoursesPage} />
+        <Route path="/admin/courses/:id" component={CourseDetail} />
     </Switch>
 );
 

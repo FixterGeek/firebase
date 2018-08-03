@@ -5,12 +5,14 @@ import NavProfile from '../nav/NavProfile';
 import {CardProfileDisplay} from './CardProfileDisplay';
 import Card from '../card/Card';
 
-export const ProfileDisplay = () => (
+export const ProfileDisplay = ({user}) => {
+   // const {photoURL, displayName, email, uid} = user
+return(
 
     <div className="perfil">
-        <NavProfile />
+        <NavProfile user={user} />
         <div className="fl mg">
-            <CardProfileDisplay />
+            <CardProfileDisplay user={user} />
             <div className="perfil_cursos">
                 <Card />
                 <Card />
@@ -20,4 +22,5 @@ export const ProfileDisplay = () => (
         </div>
 
     </div>
-);
+)
+}

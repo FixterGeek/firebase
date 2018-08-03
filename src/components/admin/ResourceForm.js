@@ -3,19 +3,30 @@ import {Button, Modal, Input, Progress} from 'antd'
 import PropTypes from 'prop-types'
 import firebase from '../../services/firebase'
 
+//testing
+import ReactMarkdown from 'react-markdown'
+import { readAsMarkdown, convertToRawUrl } from '../../services/markDownReader';
+
+
+const origin ={
+    _id:'',
+    title:'',
+    desc:'',
+    link:'',
+    text:false,
+    link:false
+}
+
 class ResourceForm extends Component{
 
     state = {
         visible:false,
         loading:false,
         videoFile:null,
-        resource:{
-            _id:'',
-            title:'',
-            desc:'',
-            link:''
-        },
-        progress: 0
+        resource:Object.assign({},origin),
+        progress: 0,
+        videoModal: true
+        
     }
 
     onChange = (e) => {
@@ -33,10 +44,13 @@ class ResourceForm extends Component{
 
     uploadVideo = () => {
         const {resource} = this.state
+        const {courseId} = this.props
         resource._id = firebase.database().ref('cursos').push().key
         resource.module = this.props.module._id
-        console.log(this.state.videoFile)
-        const uploadTask = firebase.storage().ref('videos')
+        //si no hay video
+        if(!this.state.videoFile) return this.saveResource(resource)
+        
+        const uploadTask = firebase.storage().ref('videos').child(courseId)
         .child(resource._id)
         .put(this.state.videoFile)
 
@@ -50,25 +64,28 @@ class ResourceForm extends Component{
         uploadTask.then(()=>{
             uploadTask.snapshot.ref.getDownloadURL().then(downloadURL=> {
                 resource.link = downloadURL
+                resource.type = "VIDEO"
                 this.setState({resource})
-                this.saveResource()
+                this.saveResource(resource)
               });
         })
         .catch(e=>console.log(e))
         //this.setState({visible:!this.state.visible})
     }
 
-    saveResource = () => {
+    saveResource = (resource) => {
         //se manda al modulo pa que lo guarde
-        console.log(this.state.resource)
-        this.props.addResource(this.state.resource)
+        this.props.addResource(resource)
         //se resetea
-        this.setState({visible:false,loading:false,videoFile:null})
-        
+        this.setState({resource:Object.assign({},origin),progress:0,visible:false,loading:false,videoFile:null})
+        if(resource.type === "VIDEO")  this.refs.fileInput.value = null
+       
 
     }
 
-    toggleForm = () => {
+    toggleForm = (lecture) => {
+        if(lecture) this.setState({videoModal:false})
+        else this.setState({videoModal:true})
         this.setState({visible:!this.state.visible})
     }
 
@@ -85,33 +102,91 @@ class ResourceForm extends Component{
     
       handleCancel = (e) => {
         console.log(e);
-        this.setState({
-          visible: false,
-        });
+        this.setState({resource:Object.assign({},origin),progress:0,visible:false,loading:false,videoFile:null})
+
+      }
+
+      getMarkDownLink = (input) => {
+          //this.setState({loading:true})
+          const linktoSave = convertToRawUrl(input.value)
+          const {resource}  = this.state
+          resource.link = linktoSave
+          resource.type = "GITHUB"
+          this.setState({resource})
+          //preview
+          readAsMarkdown(linktoSave)
+          .then(text=>{
+              resource.text = text
+              this.setState({resource})
+          })
+
       }
 
     render(){
-        const {loading, progress} = this.state;
+        const {loading, progress, resource, videoModal} = this.state;
         return(
             <div>
-                <Button onClick={this.toggleForm} >
-                    Add
-                </Button>   
-                <Modal
-                    title={"Agrega un recurso para: " + this.props.module.title}
+                
+
+
+                <Button onClick={()=>this.toggleForm()} >
+                    Add Video
+                </Button>  
+
+                <Button onClick={()=>this.toggleForm('lecture')} >
+                    Add Lecture
+                </Button>  
+
+                {!videoModal && !resource.text &&  <Modal
+                    title={"Agrega una Lectura para: " + this.props.module.title}
                     visible={this.state.visible}
                     onOk={this.handleOk}
                     onCancel={this.handleCancel}
                     confirmLoading={loading}
                     >
-                    <Progress percent={progress} status="active" />
-                    <Input onChange={this.onChange} name="title" placeholder="Titulo" type="text" />
+                    {loading && <Progress showInfo={false} percent={100} status={'active'} />}
+                    <Input value={resource.title} onChange={this.onChange} name="title" placeholder="Titulo" type="text" />
                         <br/>  
-                    <Input onChange={this.onChange} name="desc" placeholder="Descripción" type="text" />
+                    <Input ref="githubLink" name="otro" placeholder="Link de github" type="text" />
+                    <hr/>
+                    <Button onClick={()=>this.getMarkDownLink(this.refs.githubLink.input)}>Obtener</Button>
+                    
+                </Modal> }
+
+                {videoModal && !resource.text && <Modal
+                    title={"Agrega un Video para: " + this.props.module.title}
+                    visible={this.state.visible}
+                    onOk={this.handleOk}
+                    onCancel={this.handleCancel}
+                    confirmLoading={loading}
+                    >
+                    <Progress percent={progress} status={progress == 100 ? 'success' : 'active'} />
+                    <Input value={resource.title} onChange={this.onChange} name="title" placeholder="Titulo" type="text" />
+                        <br/>  
+                    <Input value={resource.desc} onChange={this.onChange} name="desc" placeholder="Descripción" type="text" />
                     <br/> 
-                    <Input onChange={this.onChange} name="otro" placeholder="Otro" type="text" />
-                    <input onChange={this.saveFile} type="file" accept="video/*" />
-                </Modal> 
+                    <Input value={resource.otro} onChange={this.onChange} name="otro" placeholder="Otro" type="text" />
+                    <input ref="fileInput" onChange={this.saveFile} type="file" accept="video/*" />
+                    <hr/>
+                    <p>
+                    
+                    </p>
+                </Modal> }
+
+                {resource.text && <Modal
+                    title={"Agrega un Video para: " + this.props.module.title}
+                    visible={this.state.visible}
+                    onOk={this.handleOk}
+                    onCancel={this.handleCancel}
+                    confirmLoading={loading}
+                    >
+                   {/* <p dangerouslySetInnerHTML={{__html:}} ></p>   */}
+                   <Input value={resource.title} onChange={this.onChange} name="title" placeholder="Titulo" type="text" />
+                        <br/>  
+
+                   <ReactMarkdown source={resource.text} /> 
+                </Modal> }
+            
             </div>
         )
     }
@@ -122,3 +197,5 @@ ResourceForm.protoTypes = {
 }
 
 export default ResourceForm
+
+//<ReactMarkdown source={resource.text} />
