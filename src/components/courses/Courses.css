@@ -223,3 +223,78 @@
 .sub span{
     font-size: 14px;
 }
+
+/*PAYFORM*/
+
+.pay{
+    background-color: #181818;
+    min-height: 100vh;
+    height: auto;
+}
+
+.pay form input{
+    width:100%;
+    margin-bottom: 24px;
+    color:#ccc;
+    background: #181818;
+    border:1px solid #555;
+    height:40px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.mitad{
+    width:48%;
+    box-sizing: border-box;
+}
+.pay label{
+    font-family: "Helvetica";
+    font-weight: bolder;
+    font-size: 16px;
+    color:#ccc;
+}
+
+.pay input::placeholder { font-size: 14px;   opacity: .3; }
+.pay input::placeholder { font-size: 14px;   opacity: .3; }
+.pay label{
+    margin-bottom: 4px;
+
+}
+.flex_pay{
+    display: flex;
+    flex-wrap: wrap;
+    width:80%;
+    margin: 0 auto;
+}
+.boxi_pay{
+    width:600px;
+    flex-grow: 1;
+}
+.summary{
+    width:300px;
+    flex-grow: 1;
+    padding: 0 10%;
+    color:#ccc;
+    font-family: Helvetica;
+}
+.pay hr{
+    opacity: .3;
+}
+.pay span {
+    color:#ccc;
+    font-family: Helvetica;
+    margin-right: 10px;
+}
+.img_pay{
+    width: 80%;
+    margin: 0 auto;
+}
+.img_pay img{
+    width:70%;
+    margin-left: 15%;
+}
+.summary h3{
+    color:#ccc;
+    font-size: 18px;
+    font-family: 'Muli', sans-serif;
+    text-align: center;
+}

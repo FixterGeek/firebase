@@ -12,6 +12,7 @@ import {ViewVideoDisplay} from './components/courses/ViewVideoDisplay';
 import Eventos from './components/event/Eventos';
 import Contacto from './components/contacto/Contacto';
 import HistoryDisplay from './components/history/HistoryContainer';
+import PayForm from './components/courses/PayForm';
 
 const Routes = () => (
     <Switch>
@@ -26,6 +27,7 @@ const Routes = () => (
         <Route path="/events" component={Eventos}/>
         <Route path="/contact" component={Contacto}/>
         <Route path="/history" component={HistoryDisplay}/>
+        <Route path="/courses/pay" component={PayForm}/>
         {/* Admin  */}
         <Route path="/admin/courses/new" component={NewCourse} />
     </Switch>
