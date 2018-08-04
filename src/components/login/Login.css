@@ -83,6 +83,15 @@
     font-size: 16px;
     cursor: pointer;
 }
+.facebook-signin{
+    background-color: #1254c6;
+    border: 1px solid #ffa711;
+
+}
+.google-signin{
+    background-color: #eb2a27;
+    border: 1px solid #ffa711;
+}
 .or{
     width:80%;
     margin: 0 auto;
@@ -143,4 +152,20 @@
 .log a:hover, .registro a:hover{
     color: #ffa711;
     text-decoration: underline;
+}
+
+.title{
+    color: white;
+    text-align: center;
+}
+
+.signup-form label{
+    position: relative;
+}
+
+.error-message{
+    position: absolute;
+    color:red;
+    bottom:-60px;
+    width: 400px;
 }

@@ -6,6 +6,7 @@ import {BrowserRouter} from 'react-router-dom';
 import '../node_modules/font-awesome/css/font-awesome.min.css';
 import registerServiceWorker from './registerServiceWorker';
 import 'antd/dist/antd.css';
+import 'toastr/build/toastr.css'
 
 
 
