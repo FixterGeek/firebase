@@ -84,13 +84,17 @@
     cursor: pointer;
 }
 .facebook-signin{
-    background-color: #1254c6;
-    border: 1px solid #ffa711;
+    background-color: transparent;
+    border: 1px solid white;
+    margin:0 4px 0 0;
+    box-sizing: border-box;
 
 }
 .google-signin{
-    background-color: #eb2a27;
-    border: 1px solid #ffa711;
+    background-color: transparent;
+    border: 1px solid white;
+    margin:0 0 0 4px;
+    box-sizing: border-box;
 }
 .or{
     width:80%;

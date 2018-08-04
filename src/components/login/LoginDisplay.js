@@ -2,6 +2,7 @@ import React from 'react';
 import './Login.css';
 import logo from '../../assets/firemx.png';
 import {Link} from 'react-router-dom';
+import FontAwesome from 'react-fontawesome';
 
 export const LoginDisplay = ({emailLogin, googleLogin, facebookLogin}) => (
 
@@ -18,8 +19,8 @@ export const LoginDisplay = ({emailLogin, googleLogin, facebookLogin}) => (
 
                 <h2 className="tittle" style={{textAlign:"center"}}>Inicia sesión con tu red social</h2>
                 <div style={{display:'flex'}}>
-                    <button onClick={facebookLogin} className="btn_signin facebook-signin">Facebook</button>
-                    <button onClick={googleLogin} className="btn_signin google-signin">Google</button>
+                    <button onClick={facebookLogin} className="btn_signin facebook-signin"><FontAwesome name="facebook-f"/> Facebook</button>
+                    <button onClick={googleLogin} className="btn_signin google-signin"><FontAwesome name="google"/> Google</button>
                 </div>
 
                  <div className="or">
