@@ -6,8 +6,8 @@ import { Button } from 'antd';
 class CoursePage extends Component{
 
     state = {
-        courses:{},
-        coursesOrder:[]
+        courses:[],
+        //coursesOrder:[]
     }
 
     componentWillMount(){
@@ -17,8 +17,8 @@ class CoursePage extends Component{
     getCourses = () => {
         getCourses()
         .then(courses=>{
-            const coursesOrder = Object.keys(courses)
-            this.setState({courses, coursesOrder})
+            //const coursesOrder = Object.keys(courses)
+            this.setState({courses})
         })
     }
 
@@ -32,11 +32,11 @@ class CoursePage extends Component{
                         Agregar Curso
                     </Button>
                 </Link>
-                {coursesOrder.map(id=>{
-                    const c = this.state.courses[id]
-                    return <div key={id}>
-                    <Link to={`/admin/courses/${id}/edit`}>
-                        <h2 key={id}>{c.title}</h2>
+                {courses.map(c=>{
+                    //const c = this.state.courses[id]
+                    return <div key={c._id}>
+                    <Link to={`/admin/courses/${c._id}/edit`}>
+                        <h2 key={c._id}>{c.title}</h2>
                         </Link>
                     </div>
                 })}

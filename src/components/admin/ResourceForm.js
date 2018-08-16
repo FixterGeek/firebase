@@ -50,6 +50,10 @@ class ResourceForm extends Component{
         //si no hay video
         if(!this.state.videoFile) return this.saveResource(resource)
         
+
+        //obtener duración del video
+        this.getVideoDuration(resource)
+
         const uploadTask = firebase.storage().ref('videos').child(courseId)
         .child(resource._id)
         .put(this.state.videoFile)
@@ -71,6 +75,20 @@ class ResourceForm extends Component{
         })
         .catch(e=>console.log(e))
         //this.setState({visible:!this.state.visible})
+    }
+
+    getVideoDuration = (resource) => {
+        const file = this.state.videoFile
+        const video = document.createElement('video');
+        video.preload = 'metadata';
+        video.onloadedmetadata = () => {
+          //window.URL.revokeObjectURL(video.src); //??
+          const duration = video.duration;
+          resource.duration = duration
+          this.setState({resource})
+          //console.log(resource)
+        }
+        video.src = URL.createObjectURL(file);
     }
 
     saveResource = (resource) => {
