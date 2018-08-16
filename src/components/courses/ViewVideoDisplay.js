@@ -62,7 +62,7 @@ export class ViewVideoDisplay extends React.Component{
                 <div className="box-video">
 
                     {currentVideoLink ? 
-                    <video src={currentVideoLink} className="vidios"  controls></video>
+                    <video src={currentVideoLink} className="vidios"  controls autoPlay ></video>
                     : <iframe title="video" className="vidios" src="https://www.youtube.com/embed/Rux-Q_nPrp0" frameBorder={0} allow="autoplay; encrypted-media" allowFullScreen="true"></iframe>
                     }
                 </div>
