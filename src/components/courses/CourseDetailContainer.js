@@ -24,7 +24,6 @@ class CourseDetailContainer extends Component {
     getCourse = (id) => {
         getCourseInfo(id)
         .then(course=>{
-            //console.log(course)
             this.setState({course})
         })
         .catch(e=>{

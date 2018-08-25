@@ -46,3 +46,64 @@ exports.enrollUser = functions.database.ref('/orders/{userId}/{pushId}')
 // exports.helloWorld = functions.https.onRequest((request, response) => {
 //  response.send("Hello from Firebase!");
 // });
+
+
+
+/* Cobro con Conekta */
+
+var conekta = require('conekta');
+conekta.api_key = 'key_sqCLgHarDSoaR2PWKsTZoA';
+conekta.api_version = '2.0.0';
+
+exports.makeCharge =  functions.https.onRequest((req, res) => {
+  
+  res.json({body:req.body,query:req.query})
+
+  // functions.firestore.document('courses/' + req.query.id)
+  // .get(snap=>{
+  //   res.send(snap.val());
+  // })
+
+//   const order = conekta.Order.create({
+//     "line_items": [{
+//         "name": "Tacos",
+//         "unit_price": 1000,
+//         "quantity": 12
+//     }],
+//     "shipping_lines": [{
+//         "amount": 1500,
+//         "carrier": "FEDEX"
+//     }], //shipping_lines - physical goods only
+//     "currency": "MXN",
+//     "customer_info": {
+//      "customer_id": "cus_2fkJPFjQKABcmiZWz"
+//     },
+//     "shipping_contact":{
+//      "address": {
+//        "street1": "Calle 123, int 2",
+//        "postal_code": "06100",
+//        "country": "MX"
+//      }
+//    },  //shipping_contact - required only for physical goods
+//   "metadata": { "description": "Compra de creditos: 300(MXN)", "reference": "1334523452345" },
+//   "charges":[{
+//     "payment_method": {
+//       "type": "default"
+//     }  //payment_methods - use the customer's default - a card
+//        //to charge a card, different from the default,
+//        //you can indicate the card's source_id as shown in the Retry Card Section
+//   }]
+// }, function(err, res) {
+//     if(err){
+//       console.log(err);
+//       return;
+//     }
+//     console.log(res.toObject());
+// });
+
+  
+ 
+}); 
+
+/* Cobro con Conekta */
+

@@ -3,7 +3,8 @@ import './Courses.css';
 import Nav from '../nav/Nav';
 import log from '../../assets/bootcamp.png';
 
-export const PayFormDisplay= ({course, pagar}) => (
+export const PayFormDisplay= ({course, pagar, onChange, errors}) => {
+    return(
     <div className="pay">
         <Nav />
         <div style={{padding:"130px 0 50px 0"}}>
@@ -13,27 +14,25 @@ export const PayFormDisplay= ({course, pagar}) => (
                 <div className="boxi_form">
                     <form action="">
                         <label htmlFor="">Nombre del titular</label>
-                        <input type="text" placeholder="Nombre completo"/>
+                        <input onChange={onChange} name="name" type="text" placeholder="Nombre completo"/>
                         <label htmlFor="">Numero de tarjeta</label>
-                        <input  type="text" placeholder="---- ---- ---- ----"/>
+                        <input onChange={onChange} name="number"  type="text" placeholder="---- ---- ---- ----"/>
                         <div style={{display:"flex"}}>
                             <div className="mitad">
                                 <label htmlFor="">Fecha de expiracion</label><br/>
-                                <input type="text" placeholder="MM/AA"/>
+                                <input minLength="2" maxLength="2" style={{width:100}} onChange={onChange} name="exp_month" type="text" placeholder="MM"/>
+                                <input minLength="4" maxLength="4" style={{width:100}} onChange={onChange} name="exp_year" type="text" placeholder="AA"/>
                             </div>
                             <div className="mitad" style={{marginLeft:"4%"}}>
                                 <label htmlFor="">Codigo de seguridad</label><br/>
-                                <input type="text" placeholder="CVV"/>
+                                <input minLength="3" maxLength="4" style={{width:100}} onChange={onChange} name="cvc"  type="text" placeholder="CVC"/>
                             </div>
                         </div>
                         <div style={{display:"flex"}}>
                             <div className="mitad">
-                                <label htmlFor="">Numero telefonico</label>
-                                <input type="text" placeholder="333 - 333 - 33 - 33"/>
-                            </div>
-                            <div className="mitad" style={{marginLeft:"4%"}}>
-                                <label htmlFor="">Codigo de seguridad</label>
-                                <input type="text" placeholder="CVV"/>
+                                <label htmlFor="">Numero telefónico</label>
+                                <input className={errors.tel && "error"} minLength="10" onChange={onChange} name="tel"  type="text" placeholder="333 - 333 - 33 - 33"/>
+                                {<h2 style={{color:"red"}} > {errors.tel}</h2>}
                             </div>
 
                         </div>
@@ -66,4 +65,5 @@ export const PayFormDisplay= ({course, pagar}) => (
             </div>
         </div>
     </div>
-);
+)
+}

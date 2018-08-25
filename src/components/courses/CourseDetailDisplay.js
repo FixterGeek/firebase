@@ -3,6 +3,8 @@ import './Courses.css';
 import FontAwesome from 'react-fontawesome';
 import Nav from '../nav/Nav';
 import {CardVideo} from './CardVideoDisplay';
+import {Link} from 'react-router-dom'
+import { Button } from 'antd';
 
 const desc = "JavaScript is the most widely deployed language in the world. Whether you’re interested in writing front-end client side code, back-end code for servers, or even game development..."
 
@@ -22,9 +24,12 @@ function getDuration(modules){
 
 }
 
-export const CourseDetailDisplay = ({title, _id, author={}, modules, modulesOrder, description}) => {
+export const CourseDetailDisplay = ({title, _id, author={}, modules, modulesOrder, description, enrolled={}}) => {
 const [secons, lessons] = getDuration(modules)
 //console.log(modulesOrder, modules)
+const user = JSON.parse(localStorage.getItem('user'))
+let isEnrolled
+if(enrolled[user._id]) isEnrolled = true;
 if(!modulesOrder || !modules) return null
 return (
 
@@ -42,9 +47,19 @@ return (
                         <p>{author.displayName}</p>
                         <p>{lessons} lecciones &bull; {Math.floor(secons/60)} minutos</p>
                         <p>{description || desc}</p>
-                        <button className="btn_iniciar">
-                            Empezar
-                        </button>
+                        {isEnrolled ? 
+                            <Link to="/" >
+                            <button className="btn_iniciar">
+                                Continuar
+                            </button>
+                            </Link>
+                            :
+                            <Link to={`/courses/${_id}/pay`} >
+                            <button className="btn_iniciar">
+                                Comenzar
+                            </button>
+                            </Link>
+                        }
                     </div></div>
                 </div>
             </div>
