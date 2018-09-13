@@ -3,7 +3,7 @@
     src: url('../../assets/helvetica.ttf');
 }
 .card{
-    background-color: white;
+    background-color: #f7f7f7;
     min-width: 280px;
     max-width: 300px;
     flex-grow: 1;

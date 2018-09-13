@@ -298,3 +298,11 @@
     font-family: 'Muli', sans-serif;
     text-align: center;
 }
+@media(max-width: 430px){
+    .fl_curso{
+        margin: 100px auto 50px auto;
+    }
+    .back-detail{
+        height: auto;
+    }
+}

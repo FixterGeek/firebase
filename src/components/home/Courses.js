@@ -14,7 +14,7 @@ class Courses extends Component {
                     <Card />
                 </div>
                 <Link to="/courses">
-                    <p style={{textAlign:"center", color:"#ffa711", fontFamily:"Helvetica"}}>Ver todos...</p>
+                    <p style={{textAlign:"center", color:"white", fontFamily:"Helvetica"}}>Ver todos...</p>
                 </Link>
             </div>
         );

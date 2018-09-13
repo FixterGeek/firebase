@@ -24,7 +24,7 @@ class Card extends Component {
                                 <p className="duracion">25 lecciones &bull; 55 minutos</p>
                             </div>
                         </div>
-                        <FontAwesome name="cog"/>
+                        <FontAwesome style={{color:"#363636"}} name="cog"/>
 
                     </div>
                 </Link>

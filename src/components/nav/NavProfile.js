@@ -20,22 +20,22 @@ const menu = (
             <Link to="/profile">Perfil</Link>
         </Menu.Item>
         <Menu.Item key="0">
-            <Link to="/">Todos los Cursos</Link>
+            <Link to="/courses">Todos los Cursos</Link>
         </Menu.Item>
         <Menu.Item key="1">
             <Link to="/profile/history">Historial</Link>
         </Menu.Item>
         <Menu.Divider />
         <Link to="/login">
-        <Menu.Item onClick={closeSession} key="3">Cerrar Sesión</Menu.Item>
+        <Menu.Item style={{color:" #ccc", marginLeft:"10px"}} onClick={closeSession} key="3">Cerrar Sesión</Menu.Item>
         </Link>
     </Menu>
 );
 
 class NavProfile extends Component {
     render() {
-        const {user} = this.props
-        const {photoURL, displayName} = user
+        const {user} = this.props;
+        const {photoURL, displayName} = user;
         return (
             <div className="nav-perfil">
                 <div className="flexin">

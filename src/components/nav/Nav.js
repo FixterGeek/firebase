@@ -12,7 +12,7 @@ class Nav extends Component {
                 </Link>
                 <div>
                     <Link to="/courses">
-                        <button>Get started</button>
+                        <button>Empezar</button>
                     </Link>
                     <hr/>
                     <Link to="/login">

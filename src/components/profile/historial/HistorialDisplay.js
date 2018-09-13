@@ -46,7 +46,7 @@ const data = [{
 export const HistorialDisplay = () => (
 
     <div className="historial">
-        <NavProfile />
+
         <div className="mg tabla">
             <h2 className="tittle">Tus historial de compras</h2>
             <Table  columns={columns} dataSource={data} />,
