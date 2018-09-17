@@ -10,6 +10,7 @@
     height:400px;
     margin: 100px auto 50px auto;
     background-size: cover;
+    background-position: center;
     background-image: url("https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/32883734_2072196582844170_6930472345379274752_n.jpg?_nc_cat=0&oh=77a2d16222be5b402b4b48f0d5a4b94e&oe=5BD687CC");
 }
 .text_history img{
@@ -19,7 +20,6 @@
 .cover_history{
     width:100%;
     height:100%;
-    background-color: rgba(0,0,0,.5);
 }
 .history h2{
     color:white;
@@ -34,4 +34,14 @@
     font-size: 18px;
     font-family: Helvetica;
     font-weight: 400;
+    text-align: justify;
+
+}
+@media(max-width: 430px){
+    .text_history{
+        width: 90%;
+    }
+    .history p{
+        width: 90%;
+    }
 }

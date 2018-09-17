@@ -109,6 +109,10 @@
     margin-top: 17px;
     font-size: 18px;
 }
+.ant-dropdown-menu{
+    width: 200px;
+    background-color: #222222 !important;
+}
 .ant-dropdown-menu-item > a, .ant-dropdown-menu-submenu-title > a, .ant-dropdown-menu-item, .ant-dropdown-menu-submenu-title {
     color:#ccc !important;
 }
@@ -123,6 +127,6 @@
 }
 .ant-dropdown-menu-item:hover,
 .ant-dropdown-menu-submenu-title:hover {
-    color:  #ffa711!important;
+    color:  #ffa711 !important;
     background-color: transparent !important;
 }

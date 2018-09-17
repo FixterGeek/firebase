@@ -9,7 +9,7 @@ class Footer extends Component {
             <div className="footer">
                 <div className="flex space">
                     <div className="footer_about">
-                        <h3>FirebaseMex</h3>
+                        <h3>FirebaseMx</h3>
                         <hr/>
                         <br/>
                         <Link to="/history">
@@ -29,10 +29,13 @@ class Footer extends Component {
                         <a href="https://twitter.com/FirebaseMexico_" target="blank">
                             <FontAwesome name="twitter-square"/>
                         </a>
-                        <a href="https://www.linkedin.com/company/firebase-mexico/" target="blank">
+                        <a href="">
                             <FontAwesome name="github-square"/>
                         </a>
-                        <FontAwesome name="linkedin"/>
+                        <a href="https://www.linkedin.com/company/firebase-mexico/" target="blank">
+                            <FontAwesome name="linkedin"/>
+                        </a>
+
                         <FontAwesome name="youtube"/>
                     </div>
                 </div>

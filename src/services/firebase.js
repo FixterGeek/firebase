@@ -251,6 +251,31 @@ const config = {
   // }
   
 
+
+  /** Cupones
+   * 
+   */
+
+   export const applyCoupon = (cupon) => {
+    const url = 'https://us-central1-reactfirebase-b16aa.cloudfunctions.net/applyCoupon'
+    return fetch(url, {
+        method:'post',
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body: JSON.stringify({coupon:cupon})
+    })
+    .then(r=>{
+        if(!r.ok) {
+            return Promise.reject(r.statusText)
+        }
+        return r.json()
+    })
+    .then(res=>{
+        return res
+    })
+   }
+
   
 
 

@@ -1,6 +1,9 @@
 const functions = require('firebase-functions');
 // The Firebase Admin SDK to access the Firebase Realtime Database.
 const admin = require('firebase-admin');
+const cors = require('cors')({
+  origin: true,
+});
 
 const config = {
     apiKey: "AIzaSyCfGksHS2BpYH6BXrqznpZWMlAwzrmtttU",
@@ -54,6 +57,44 @@ exports.enrollUser = functions.database.ref('/orders/{userId}/{pushId}')
 var conekta = require('conekta');
 conekta.api_key = 'key_sqCLgHarDSoaR2PWKsTZoA';
 conekta.api_version = '2.0.0';
+
+exports.applyCoupon = functions.https.onRequest((req,res)=>{
+
+cors(req, res, () => { //cors
+
+    const coupon = req.body.coupon
+    console.log(coupon)
+    if(!coupon) return res.status(301).send({message:"No se proporcionó ningun cupon"})
+    admin.firestore().collection('cupons').doc(coupon).get()
+    .then(doc=>{ 
+      if(!doc.exists) {
+        console.log("no existe D=")
+        return res.status(301).send({message:"El cupon no existe"})
+        
+      }
+      console.log(doc.data())
+      return res.send(doc.data())
+      
+     })
+    .catch(e=>{
+      console.log(e)
+      return res.status(500).send({error:e})
+      
+    })
+
+    //res.status(200).send({message:"Segun simon"});
+
+
+    // const coupon = req.body.coupon
+    // return admin.firestore().collection('coupons').doc(coupon).get()
+    // .then(snap=>{
+    //   return res.send(snap.val())
+    // })
+    // .catch(e=>console.log(e))
+
+})// cors
+
+});
 
 exports.makeCharge =  functions.https.onRequest((req, res) => {
   

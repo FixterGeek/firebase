@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import './Courses.css';
 import {PayFormDisplay} from './PayFormDisplay';
-import firebase, {paymentAccepted, getCourseInfo} from '../../services/firebase';
+import firebase, {paymentAccepted, getCourseInfo, applyCoupon} from '../../services/firebase';
 import toastr from 'toastr'
 //import * as Conekta from '../../services/conekta'
-let Conekta;
+import Conekta from '../../services/conekta'
 
 
 
 class PayForm extends Component {
 
     state = {
-        course:{},
+        loading:false,
+        course:{
+            price: 1250
+        },
         user:{},
         card:{
             "number": "4242424242424242",
@@ -21,7 +24,9 @@ class PayForm extends Component {
             "cvc": "123",
             tel:"777777777777"
           },
-          errors:{}
+          errors:{},
+          conekta:null,
+          coupon:null
     }
 
     onChange = (e) => {
@@ -40,7 +45,7 @@ class PayForm extends Component {
     }
 
     componentWillMount(){
-        this.loadScriptURL()
+        this.setState({conekta:new Conekta()})
         this.getCourseId()
         this.getUser()
     }
@@ -84,62 +89,66 @@ class PayForm extends Component {
     }
 
     pagar = () => {
-        if(!this.validateCard()) return
+        if(!this.validateCard() && this.state.conekta ) return
+        this.setState({loading:true})
         //aqui va la tokenización a conekta y promesa de vuelta
         //Conekta = window.Conekta
         //Conekta.setPublicKey('key_Ik4WxMhXctrriTvyfMAimyg');
-        window.Conekta.Token.create({card:this.state.card}, token=>console.log(token), err=>console.log(err));
+        this.state.conekta.api.Token.create({card:this.state.card}, token=>{
+            console.log(token)
+            this.setState({loading:false})
+        }, err=>console.log(err));
         //una vez aceptado el pago, enrolamos al usuario
 
         /** se usa cloud function!! en el servicio ;) */
-        const data = {
-            courseId: this.props.match.params.id,
-            userId: this.state.user.uid
-        }
-        paymentAccepted(data)
-        .then(courseId=>{
-            this.props.history.push('/courses/' + courseId)
+        // const data = {
+        //     courseId: this.props.match.params.id,
+        //     userId: this.state.user.uid
+        // }
+        // paymentAccepted(data)
+        // .then(courseId=>{
+        //     this.props.history.push('/courses/' + courseId)
+        // })
+        // .catch(e=>{
+        //     console.log(e)
+        //     toastr.error(e)
+        // })
+    }
+
+    applyCupon = (cupon) => {
+        console.log(cupon)
+        this.setState({loading:true})
+        applyCoupon(cupon)
+        .then(coupon=>{
+            toastr.success("Cupon aplicado")
+            
+            const {course} = this.state
+            
+            
+            this.setState({loading:false,coupon})
         })
         .catch(e=>{
-            console.log(e)
-            toastr.error(e)
+            toastr.error("Este cupon no es valido")
+            this.setState({loading:false})
         })
     }
 
-    loadScriptURL () {
-        console.log("segun")
-        const script = document.createElement('script')
-        script.src = 'https://cdn.conekta.io/js/latest/conekta.js'
-        script.async = 1
-        script.onload = () => {
-            console.log("ya", window.Conekta)
-          if (window.Conekta !== undefined) {
-            console.log("Exito", window.Conekta)
-            window.Conekta.setPublishableKey("key_Ik4WxMhXctrriTvyfMAimyg")
-          }
-        }
-        script.onerror = () => {
-          console.log('error')
-          throw new Error('Error: Conekta script wasn\'t loaded.')
-        }
-        document.body.appendChild(script)
-      }
-      
-    
+
 
    
 
     render() {
-        const {course, errors} = this.state
+        const {course, errors, loading} = this.state
         return (
             <div  >
                 <PayFormDisplay 
+                    loading={loading}
                     pagar={this.pagar}
                     course={course} 
                     onChange={this.onChange}
                     errors={errors}
+                    applyCupon={this.applyCupon}
                 />
-                <script type="text/javascript" data-conekta-public-key="key_KJysdbf6PotS2ut2" src="https://cdn.conekta.io/js/v1.0.1/conekta.js"></script>
             </div>
         );
     }

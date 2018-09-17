@@ -26,7 +26,7 @@ class Courses extends Component {
                     {courses.map(c=><Card key={c._id} {...c} />)}
                 </div>
                 <Link to="/courses">
-                    <p style={{textAlign:"center", color:"#ffa711", fontFamily:"Helvetica"}}>Ver todos...</p>
+                    <p style={{textAlign:"center", color:"white", fontFamily:"Helvetica"}}>Ver todos...</p>
                 </Link>
             </div>
         );

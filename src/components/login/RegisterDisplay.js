@@ -82,21 +82,8 @@ export class RegisterDisplay extends React.Component {
             </div>
             <div className="log_form">
                 <div className="form_r">
-                    <h2 className="tittle" style={{textAlign:"center"}}>Crea una cuenta con tu red social</h2>
 
-                   <div style={{display:'flex'}}>
-                    <button onClick={this.signUpWithFacebook} className="btn_signin facebook-signin">Facebook</button>
-                    <button onClick={this.signUpWithGoogle} className="btn_signin google-signin">Google</button>
-                    </div>
 
-                                   
-                    <div className="or">
-                        <hr className="divide"/> 
-                        <span style={{margin:"0 10px"}}>
-                        o
-                        </span>
-                        <hr className="divide"/>
-                    </div>
                     <h2 className="title" >Completa el formulario</h2>
                     <form className="signup-form" onSubmit={this.signUpWithEmail} action="">
                         <label htmlFor="displayName">

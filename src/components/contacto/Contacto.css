@@ -37,11 +37,11 @@
     width:100%;
     margin-bottom: 24px;
     color:#ccc;
-    background: white;
     border:1px solid #555;
     height:40px;
     padding-left: 10px;
     box-sizing: border-box;
+    background-color:#f7f7f7;
 
 }
 .box_contact textarea{

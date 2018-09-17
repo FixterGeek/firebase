@@ -9,6 +9,7 @@ export const CardProfileDisplay = ({user}) => (
         <div className="photo_user">
             <img src={user.photoURL || pic} alt={user.displayName}/>
         </div>
+        <br/>
         <p className="user_name">{user.displayName}</p>
         <p className="user_job"><FontAwesome name="briefcase"/> USUARIO PREMIUM</p>
         <p className="user_descript">Pollo pollollon pollencio</p>

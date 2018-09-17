@@ -45,7 +45,7 @@ class Card extends Component {
                                 <p className="duracion">{lessons} lecciones &bull; {Math.floor(secons / 60)} minutos</p>
                             </div>
                         </div>
-                        <FontAwesome name="cog"/>
+                        <FontAwesome style={{color:"#363636"}} name="cog"/>
 
                     </div>
                 </Link>

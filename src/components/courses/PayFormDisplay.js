@@ -2,13 +2,19 @@ import React from 'react';
 import './Courses.css';
 import Nav from '../nav/Nav';
 import log from '../../assets/bootcamp.png';
+import {Spin} from 'antd'
 
-export const PayFormDisplay= ({course, pagar, onChange, errors}) => {
+let cupon = ''
+
+export const PayFormDisplay= ({course, pagar, onChange, errors, loading, applyCupon}) => {
     return(
     <div className="pay">
         <Nav />
         <div style={{padding:"130px 0 50px 0"}}>
-            <h2 className="tittle " style={{textAlign:"center", color:"#ccc", fontFamily:"Muli"}}> Completa tus datos de pago</h2>
+            <h2 className="tittle " style={{textAlign:"center", color:"#ccc", fontFamily:"Muli"}}>
+             Completa tus datos de pago
+             {loading && <Spin />}
+             </h2>
             <br/>
             <div className="flex_pay">
                 <div className="boxi_form">
@@ -21,7 +27,7 @@ export const PayFormDisplay= ({course, pagar, onChange, errors}) => {
                             <div className="mitad">
                                 <label htmlFor="">Fecha de expiracion</label><br/>
                                 <input minLength="2" maxLength="2" style={{width:100}} onChange={onChange} name="exp_month" type="text" placeholder="MM"/>
-                                <input minLength="4" maxLength="4" style={{width:100}} onChange={onChange} name="exp_year" type="text" placeholder="AA"/>
+                                <input minLength="4" maxLength="4" style={{width:100}} onChange={onChange} name="exp_year" type="text" placeholder="AAAA"/>
                             </div>
                             <div className="mitad" style={{marginLeft:"4%"}}>
                                 <label htmlFor="">Codigo de seguridad</label><br/>
@@ -60,7 +66,14 @@ export const PayFormDisplay= ({course, pagar, onChange, errors}) => {
                     <div style={{display:"flex", justifyContent:"space-between"}}>
                         <p>Total</p><p>$1000.00</p>
                     </div>
-                    <button onClick={pagar} className="btn_signin">Pagar</button>
+                    <div style={{display:'flex', width:400}}>
+                        <input onChange={e=>cupon=e.target.value} style={{color:'orange'}} type="text" />
+                        <button onClick={()=>applyCupon(cupon)} style={{cursor:'pointer',backgroundColor:'white', color:'orange'}} >Aplicar Cupon</button>
+                    </div>
+                    
+                    <button disabled={loading} onClick={pagar} className="btn_signin">
+                        {loading ? <Spin /> : "pagar"}
+                    </button>
                 </div>
             </div>
         </div>
