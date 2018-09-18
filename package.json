@@ -9,6 +9,7 @@
     "firebase-admin": "^5.11.0",
     "firebase-functions": "^2.0.2",
     "font-awesome": "^4.7.0",
+    "moment": "^2.22.2",
     "react": "^16.4.1",
     "react-beautiful-dnd": "^8.0.5",
     "react-dom": "^16.4.1",

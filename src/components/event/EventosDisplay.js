@@ -3,8 +3,10 @@ import './Eventos.css';
 import Nav from '../nav/Nav';
 import {CardEvent} from './CardEvent';
 import {CardStream} from './CardStream';
+import moment from 'moment'
+import 'moment/locale/es'
 
-export const EventosDisplay = () => (
+export const EventosDisplay = ({events=[]}) => (
 
     <div className="courses">
         <Nav />
@@ -14,17 +16,27 @@ export const EventosDisplay = () => (
             </div>
         </div>
         <div className="fl_event">
-            <CardStream />
-            <CardEvent/>
+
+            {events.map((e,i)=>{
+                if(moment().diff(e.start_time, 'minutes') < 0){
+                    return <CardStream  key={i} {...e} />
+                }else{
+                    return <CardEvent key={i} {...e} />
+                }
+                   
+            })}
+             {/* <CardStream /> */}
+           
+            {/* <CardEvent/>
             <CardEvent/>
 
             <CardEvent/>
             <CardEvent/>
-            <CardStream />
+           
 
             <CardStream />
             <CardEvent/>
-            <CardEvent/>
+            <CardEvent/> */}
 
         </div>
 
