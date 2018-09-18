@@ -7,7 +7,7 @@ export const CardProfileDisplay = ({user}) => (
 
     <div className="card_profile">
         <div className="photo_user">
-            <img src={user.photoURL || pic} alt={user.displayName}/>
+            <img src={user.photoURL + '?type=large' || pic} alt={user.displayName}/>
         </div>
         <br/>
         <p className="user_name">{user.displayName}</p>
