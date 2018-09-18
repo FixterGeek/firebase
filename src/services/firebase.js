@@ -1,5 +1,8 @@
-import firebase from 'firebase'
-import { rejects } from 'assert';
+import firebase from 'firebase/app'
+//migracion a firestore
+import "firebase/firestore"
+import 'firebase/database'
+import 'firebase/auth'
 
 const config = {
     apiKey: "AIzaSyCfGksHS2BpYH6BXrqznpZWMlAwzrmtttU",
@@ -10,27 +13,94 @@ const config = {
     messagingSenderId: "113538498979"
   };
   firebase.initializeApp(config);
+   
   export default firebase
 
   //API
-  const db = firebase.database().ref()
-  const coursesRef = firebase.database().ref('cursos')
-  const coursesInfoRef = firebase.database().ref('cursosInfo')
-  const ordersRef = firebase.database().ref('orders')
+  //const db = firebase.database().ref()
+  const db = firebase.firestore()
+  const settings = {/* your settings... */ timestampsInSnapshots: true};
+  db.settings(settings);
+
+/* Configuración importante */
+    // Old:
+    // const date = snapshot.get('created_at');
+    // // New:
+    // const timestamp = snapshot.get('created_at');
+    // const date = timestamp.toDate();
+
+
+
+  //const coursesRef = firebase.database().ref('cursos')
+  const coursesRef = db.collection('courses')
+  //const coursesInfoRef = firebase.database().ref('cursosInfo')
+  const coursesInfoRef = db.collection('coursesInfo')
+  //const ordersRef = firebase.database().ref('orders')
+
+
+
+  // export const getCourses = () => {
+  //   return coursesRef.once('value')
+  //   .then(snap=>{
+  //     return snap.val()
+  //   })
+  //   .catch(e=>e)
+  // }
+
+
+  /* Public courses info and authors */
+
+  export const getCoursesInfo = () => {
+    return coursesInfoRef.get()
+    .then(snap=>{
+      const courses= []
+      snap.forEach(doc=>{
+        courses.push(doc.data())
+      })
+      return courses
+    })
+    .catch(e=>{
+      console.log(e)
+      return e
+    })
+  }
+
+  export const getCourseInfo = (id) => {
+    return coursesRef.doc(id).get()
+    .then(doc=>{
+      return courseInfo(doc.data())
+    })
+    .catch(e=>{
+      console.log(e)
+      return e
+    })
+  }
+
+  /* Public courses info and authors */
 
 
   export const getCourses = () => {
-    return coursesRef.once('value')
-    .then(snap=>{
-      return snap.val()
-    })
-    .catch(e=>e)
+      const courses = []
+      return coursesRef.get()
+      .then(snap=>{
+        snap.forEach(doc=>{
+          const course = doc.data()
+          course.uid = doc.id
+          courses.push(course)
+        })
+        return courses
+      })
+      .catch(e=>e)
   }
 
+
   export const getCourse = (key) => {
-    return coursesRef.child(key).once('value')
-    .then(snap=>{
-      return snap.val()
+    return coursesRef.doc(key).get()
+    .then(doc=>{
+      if(doc.exists) {
+        return doc.data()
+      }
+      return null
     })
     .catch(e=>{
       console.log(e)
@@ -44,26 +114,44 @@ const config = {
   }
 
   const getKey = (course) => {
-    const key = coursesRef.push().key
+    const key = coursesRef.doc().id
     course._id = key
+
+    //de paso asignamos el autor
+    const user = JSON.parse(localStorage.getItem('user'))
+    course.author = user
+    //
     return saveCourse(course)
   }
 
   const updateCourse = (course) => {
     const key = course._id
-    //add info
-    courseInfo(course)
-    return coursesRef.child(key).set(course)
+    return coursesRef.doc(key).set(course)
     .then(()=>{
+      //add info
+      //courseInfo(course)
       return key
     })
   }
 
   const courseInfo = (course) => {
+    //tenemos un problema de deep relations !!!*****!!!!
+
     //do enaything necessary
-    const c = Object.assign({}, course)
-    delete c.modules
-    coursesInfoRef.child(c._id).set(c)
+    const c = {...course}
+    //no queremos borrar los modulos, solo los links de los recursos
+    //delete c.modules
+    const modulesKeys = Object.keys(c.modules)
+    for(let key of modulesKeys){
+      const materialKeys = Object.keys(c.modules[key].materials)
+      for(let i of materialKeys){
+        delete c.modules[key].materials[i].link
+      }
+    }
+
+    //solucion provisional - borrar links en el frontend
+    return c
+    //coursesInfoRef.doc(c._id).set(c)
   }
 
   //users DB
@@ -75,14 +163,14 @@ const config = {
       email: user.email,
       photoURL: user.photoURL || null
     }
-    return db.child('users').child(user.uid)
-    .once('value')
-    .then(snap=>{
-      if(snap.val()) {
-        localStorage.setItem('user', JSON.stringify(snap.val()))
-        return snap.val()
+    return db.collection('users').doc(user.uid)
+    .get()
+    .then(doc=>{
+      if(doc.exists) {
+        localStorage.setItem('user', JSON.stringify(doc.data()))
+        return doc.data()
       }
-      db.child('users').child(newUser.uid).set(newUser)
+      db.collection('users').doc(newUser.uid).set(newUser)
       localStorage.setItem('user', JSON.stringify(newUser))
       return newUser
     })
@@ -164,6 +252,31 @@ const config = {
   //   })
   // }
   
+
+
+  /** Cupones
+   * 
+   */
+
+   export const applyCoupon = (cupon) => {
+    const url = 'https://us-central1-reactfirebase-b16aa.cloudfunctions.net/applyCoupon'
+    return fetch(url, {
+        method:'post',
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body: JSON.stringify({coupon:cupon})
+    })
+    .then(r=>{
+        if(!r.ok) {
+            return Promise.reject(r.statusText)
+        }
+        return r.json()
+    })
+    .then(res=>{
+        return res
+    })
+   }
 
   
 

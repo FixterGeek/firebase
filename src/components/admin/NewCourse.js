@@ -14,8 +14,13 @@ class NewCourse extends Component{
         course:{
             title:"Nuevo Curso"
         },
-        editModuleTitle:false
+        editModuleTitle:false,
+        user:null
     }
+
+    // editResource = (materialId) => {
+
+    // }
 
     removeResource = (materialId, moduleId) => {
         const {course} = this.state
@@ -150,6 +155,7 @@ class NewCourse extends Component{
     }
 
     componentWillMount(){
+        this.getUser()
         let id = this.props.match.params.id
         if(this.props.match.params.id){
            getCourse(id)
@@ -166,6 +172,12 @@ class NewCourse extends Component{
             })
             .catch(e=>console.log(e))
         }
+    }
+
+    getUser = () => {
+        const user = JSON.parse(localStorage.getItem('user'))
+        if(!user) return this.props.history.push('/login')
+        this.setState({user})
     }
 
     render(){

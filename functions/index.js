@@ -1,6 +1,9 @@
 const functions = require('firebase-functions');
 // The Firebase Admin SDK to access the Firebase Realtime Database.
 const admin = require('firebase-admin');
+const cors = require('cors')({
+  origin: true,
+});
 
 const config = {
     apiKey: "AIzaSyCfGksHS2BpYH6BXrqznpZWMlAwzrmtttU",
@@ -46,3 +49,102 @@ exports.enrollUser = functions.database.ref('/orders/{userId}/{pushId}')
 // exports.helloWorld = functions.https.onRequest((request, response) => {
 //  response.send("Hello from Firebase!");
 // });
+
+
+
+/* Cobro con Conekta */
+
+var conekta = require('conekta');
+conekta.api_key = 'key_sqCLgHarDSoaR2PWKsTZoA';
+conekta.api_version = '2.0.0';
+
+exports.applyCoupon = functions.https.onRequest((req,res)=>{
+
+cors(req, res, () => { //cors
+
+    const coupon = req.body.coupon
+    console.log(coupon)
+    if(!coupon) return res.status(301).send({message:"No se proporcionó ningun cupon"})
+    admin.firestore().collection('cupons').doc(coupon).get()
+    .then(doc=>{ 
+      if(!doc.exists) {
+        console.log("no existe D=")
+        return res.status(301).send({message:"El cupon no existe"})
+        
+      }
+      console.log(doc.data())
+      return res.send(doc.data())
+      
+     })
+    .catch(e=>{
+      console.log(e)
+      return res.status(500).send({error:e})
+      
+    })
+
+    //res.status(200).send({message:"Segun simon"});
+
+
+    // const coupon = req.body.coupon
+    // return admin.firestore().collection('coupons').doc(coupon).get()
+    // .then(snap=>{
+    //   return res.send(snap.val())
+    // })
+    // .catch(e=>console.log(e))
+
+})// cors
+
+});
+
+exports.makeCharge =  functions.https.onRequest((req, res) => {
+  
+  res.json({body:req.body,query:req.query})
+
+  // functions.firestore.document('courses/' + req.query.id)
+  // .get(snap=>{
+  //   res.send(snap.val());
+  // })
+
+//   const order = conekta.Order.create({
+//     "line_items": [{
+//         "name": "Tacos",
+//         "unit_price": 1000,
+//         "quantity": 12
+//     }],
+//     "shipping_lines": [{
+//         "amount": 1500,
+//         "carrier": "FEDEX"
+//     }], //shipping_lines - physical goods only
+//     "currency": "MXN",
+//     "customer_info": {
+//      "customer_id": "cus_2fkJPFjQKABcmiZWz"
+//     },
+//     "shipping_contact":{
+//      "address": {
+//        "street1": "Calle 123, int 2",
+//        "postal_code": "06100",
+//        "country": "MX"
+//      }
+//    },  //shipping_contact - required only for physical goods
+//   "metadata": { "description": "Compra de creditos: 300(MXN)", "reference": "1334523452345" },
+//   "charges":[{
+//     "payment_method": {
+//       "type": "default"
+//     }  //payment_methods - use the customer's default - a card
+//        //to charge a card, different from the default,
+//        //you can indicate the card's source_id as shown in the Retry Card Section
+//   }]
+// }, function(err, res) {
+//     if(err){
+//       console.log(err);
+//       return;
+//     }
+//     console.log(res.toObject());
+// });
+
+  
+ 
+}); 
+
+/* Cobro con Conekta */
+
