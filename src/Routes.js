@@ -7,7 +7,7 @@ import {RegisterDisplay} from './components/login/RegisterDisplay' ;
 import Profile from './components/profile/Profile';
 import Historial from './components/profile/historial/Historial';
 import Courses from './components/courses/Courses';
-import {CourseDetailDisplay} from './components/courses/CourseDetailDisplay';
+//import {CourseDetailDisplay} from './components/courses/CourseDetailDisplay';
 import CoursesPage from './components/admin/CoursesPage'
 import CourseDetail from './components/admin/CourseDetail'
 import CourseDetailContainer from './components/courses/CourseDetailContainer';
@@ -25,8 +25,8 @@ const Routes = () => (
         <Route exact path="/profile" component={Profile}/>
         <Route path="/profile/history" component={Historial}/>
         <Route exact path="/courses" component={Courses}/>
-        <Route exact path="/courses/:id" component={CourseDetailContainer}/>
-        <Route path="/courses/:id/intro" component={ViewVideoDisplay}/>
+        <Route exact path="/courses/:id" component={CourseDetailContainer} />
+        <Route path="/courses/:courseId/:moduleId/:materialId" component={ViewVideoDisplay} />
         <Route path="/events" component={Eventos}/>
         <Route path="/contact" component={Contacto}/>
         <Route path="/history" component={HistoryDisplay}/>

@@ -6,7 +6,7 @@ import {CardProfileDisplay} from './CardProfileDisplay';
 import Card from '../card/Card';
 
 export const ProfileDisplay = ({user}) => {
-   // const {photoURL, displayName, email, uid} = user
+   const {photoURL, displayName, email, uid, enrolled=[]} = user
 return(
 
     <div className="perfil">
@@ -19,6 +19,13 @@ return(
                     <Card />
                     <Card />
                     <Card/>
+                {enrolled.map((c,index)=>{
+                    return (
+                        <Card key={index} {...c} />
+                    )
+                })}
+                {enrolled.length < 1 && <h2 style={{color:"white"}}>Consigue tu primer curso</h2>}
+
 
             </div>
             </div>
