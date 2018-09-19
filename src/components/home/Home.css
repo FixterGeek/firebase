@@ -83,14 +83,16 @@
 .about h2{
     color:#ccc;
 }
-.about{
-    width:100%;
+.about {
+    width: 100%;
     padding: 50px 0;
-    background-color:#181818;
-    color:#ccc;
+    background-color: #181818;
+    color: #ccc;
     text-align: left;
-
 }
+.about_text p{
+}
+
 .flex{
     width:80%;
     margin: 0 auto;

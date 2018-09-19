@@ -14,11 +14,13 @@ return(
         <div className="fl mg">
             <CardProfileDisplay user={user} />
             <div className="profile_cursos">
-                <Card />
-                <Card />
-                <Card/>
+                <h2>Mis cursos</h2>
+                <div className="cursos_box">
+                    <Card />
+                    <Card />
+                    <Card/>
 
-
+            </div>
             </div>
         </div>
 

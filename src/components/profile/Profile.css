@@ -48,13 +48,19 @@
     font-weight: bolder;
 }
 .profile_cursos{
-    display: flex;
-    flex-wrap: wrap;
-    box-sizing: border-box;
     margin: 0 10px;
     width: 600px;
     flex-grow: 1;
-    justify-content: center;
+}
+.profile_cursos h2{
+    color:#ccc;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.cursos_box{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
 .fl{
     width:80%;
