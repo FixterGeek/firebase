@@ -26,7 +26,7 @@ const pic = "https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/29388325_1573144522
 
 class Card extends Component {
     render() {
-        const {title, modulesOrder, author, modules, _id} = this.props
+        const {title, modulesOrder, author={}, modules, _id} = this.props
         const {displayName, photoURL} = author
         const [secons, lessons] = getDuration(modules)
         return (
@@ -42,9 +42,10 @@ class Card extends Component {
 
                     <p className="clase">Course &bull; Firebase</p>
 
-                    <h3>Firebase Tools</h3>
-                    <hr className="line-gris"/>
                     <h3>{title}</h3>
+                    <br/>
+                    <hr className="line-gris"/>
+
                     <div className="data">
                         <div style={{display:"flex"}}>
                             <img className="autor_img" src={photoURL || pic} alt={displayName}/>
