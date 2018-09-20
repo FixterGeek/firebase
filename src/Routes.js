@@ -16,11 +16,9 @@ import Eventos from './components/event/Eventos';
 import Contacto from './components/contacto/Contacto';
 import HistoryDisplay from './components/history/HistoryContainer';
 import PayForm from './components/courses/PayForm';
-import Welcome from './correos/Welcome.html';
 const Routes = () => (
     <Switch>
         <Route exact path="/" component={HomeContainer} />
-            <Route path="/welcome" component={Welcome}/>
         <Route path="/login" component={Login} />
         <Route path="/register" component={RegisterDisplay}/>
         <Route exact path="/profile" component={Profile}/>
