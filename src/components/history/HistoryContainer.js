@@ -4,6 +4,9 @@ import Nav from '../nav/Nav';
 import Footer from '../footer/Footer';
 
 class HistoryContainer extends Component {
+    componentDidMount () {
+        window.scroll(0, 0)
+    }
     render() {
         return (
             <div>
