@@ -4,9 +4,14 @@ import './Profile.css';
 import NavProfile from '../nav/NavProfile';
 import {CardProfileDisplay} from './CardProfileDisplay';
 import Card from '../card/Card';
+import {Button} from 'antd'
+import { Link } from 'react-router-dom';
 
 export const ProfileDisplay = ({user}) => {
-   const {photoURL, displayName, email, uid, enrolled=[]} = user
+   const {photoURL, displayName, email, uid} = user
+   const enrolled = Object.keys(user.enrolled)
+   //se tienen que traer los cursos de la bd
+   console.log(enrolled)
 return(
 
     <div className="perfil">
@@ -14,12 +19,21 @@ return(
         <div className="fl mg">
             <CardProfileDisplay user={user} />
             <div className="profile_cursos">
-                {enrolled.map((c,index)=>{
+                {/* {enrolled.map((c,index)=>{
                     return (
-                        <Card key={index} {...c} />
+                        <Card key={index} {...user.enrolled[c]} />
                     )
-                })}
-                {enrolled.length < 1 && <h2 style={{color:"white"}}>Consigue tu primer curso</h2>}
+                })} */}
+                {enrolled.length < 1 && 
+                <h2 style={{color:"white"}}>
+                <Link to="/courses" >
+                <Button style={{background:'black', color:"white"}} >
+                     Consigue tu primer curso
+                </Button>
+                </Link>
+                
+                
+                </h2>}
 
 
             </div>

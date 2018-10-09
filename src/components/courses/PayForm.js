@@ -116,16 +116,15 @@ class PayForm extends Component {
     }
 
     applyCupon = (cupon) => {
-        console.log(cupon)
         this.setState({loading:true})
         applyCoupon(cupon)
         .then(coupon=>{
-            toastr.success("Cupon aplicado")
-            
+            console.log(coupon)
             const {course} = this.state
-            
-            
-            this.setState({loading:false,coupon})
+            course.coupon = coupon
+            console.log(course)
+            this.setState({course, loading:false,coupon})
+            toastr.success("Cupon aplicado")
         })
         .catch(e=>{
             toastr.error("Este cupon no es valido")

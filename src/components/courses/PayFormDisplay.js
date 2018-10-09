@@ -7,6 +7,8 @@ import {Spin} from 'antd'
 let cupon = ''
 
 export const PayFormDisplay= ({course, pagar, onChange, errors, loading, applyCupon}) => {
+    let {coupon={}, price} = course
+    let total = Number(price) - 250 
     return(
     <div className="pay">
         <Nav />
@@ -57,20 +59,23 @@ export const PayFormDisplay= ({course, pagar, onChange, errors, loading, applyCu
                     <p>Resumen</p>
                     <hr/>
                     <div style={{display:"flex", justifyContent:"space-between"}}>
-                        <p>Precio</p><p>$1,250.00</p>
+                        <p>Precio</p><p>${price}.00</p>
                     </div>
                     <div style={{display:"flex", justifyContent:"space-between"}}>
-                        <p>Descuento</p><p>$250.00</p>
+                        <p>Descuento por lanzamiento</p><p>$250.00</p>
+                    </div>
+                    <div style={{display:"flex", justifyContent:"space-between"}}>
+                        <p>Cupon  {coupon._id && " | " + coupon._id}</p><p>{coupon.percentage ? null : "$"}  {coupon.discount || 0} {coupon.percentage ? "%":"MXN"} </p>
                     </div>
                     <hr/>
                     <div style={{display:"flex", justifyContent:"space-between"}}>
-                        <p>Total</p><p>$1000.00</p>
+                        <p>Total</p><p>$ { !coupon.discount ? total : coupon.percentage ?  total * (1 - coupon.discount * .01)  : total - coupon.discount }.00 MXN</p>
                     </div>
                     <div style={{display:'flex', width:400}}>
                         <input onChange={e=>cupon=e.target.value} style={{color:'orange'}} type="text" />
                         <button onClick={()=>applyCupon(cupon)} style={{cursor:'pointer',backgroundColor:'white', color:'orange'}} >Aplicar Cupon</button>
                     </div>
-                    
+                    <hr />
                     <button disabled={loading} onClick={pagar} className="btn_signin">
                         {loading ? <Spin /> : "pagar"}
                     </button>

@@ -148,3 +148,34 @@ exports.makeCharge =  functions.https.onRequest((req, res) => {
 
 /* Cobro con Conekta */
 
+
+//free courses enrollment
+
+exports.enrollFreeUser =  functions.https.onRequest((req, res) => {
+  console.log(req.body)
+  //enrolling
+  cors(req,res,()=>{
+    const course = admin.firestore().collection('courses').doc(req.body.courseId)
+    const user = admin.firestore().collection('users').doc(req.body.userId)
+    Promise.all([user.get(), course.get()])
+    .then(result=>{
+      const u = result[0].data()
+      const c = result[1].data()
+      console.log("user: ", u)
+      console.log("course: ", c)
+      if(!c.enrolled) c.enrolled={}
+      if(!u.enrolled) u.enrolled={}
+      c.enrolled[u._id] = true
+      u.enrolled[c._id] = true
+      course.set(c)
+      user.set(u)
+      return res.status(200).send(u)
+    })
+    .catch(e=>{
+      console.log(e)
+      return res.status(500).send(e)
+    })
+
+  })
+})
+

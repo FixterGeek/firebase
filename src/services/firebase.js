@@ -3,6 +3,8 @@ import firebase from 'firebase/app'
 import "firebase/firestore"
 import 'firebase/database'
 import 'firebase/auth'
+//fetching
+import axios from 'axios'
 
 const config = {
     apiKey: "AIzaSyCfGksHS2BpYH6BXrqznpZWMlAwzrmtttU",
@@ -157,6 +159,7 @@ const config = {
   //users DB
   const getOrCreateUser = (user) => {
     const newUser = {
+      enrolled: [],
       _id: user.uid,
       uid: user.uid,
       displayName: user.displayName || null,
@@ -275,6 +278,24 @@ const config = {
     })
     .then(res=>{
         return res
+    })
+   }
+
+   export const enrollFreeUser = (user, course) => {
+    const url = 'https://us-central1-reactfirebase-b16aa.cloudfunctions.net/enrollFreeUser'
+    const body = {
+      userId: user._id,
+      courseId: course._id
+    }
+    return axios.post(url, body)
+    .then(res=>{
+      console.log(res)
+      localStorage.setItem('user', JSON.stringify(res.data))
+      return res.data
+    })
+    .catch(e=>{
+      console.log(e)
+      return e
     })
    }
 

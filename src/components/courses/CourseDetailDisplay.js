@@ -24,13 +24,13 @@ function getDuration(modules){
 
 }
 
-export const CourseDetailDisplay = ({title, _id, author={}, modules, modulesOrder, description, enrolled={}}) => {
+export const CourseDetailDisplay = ({loading, enroll, title, _id, author={}, modules, modulesOrder=[], description, isEnrolled, enrolled={}}) => {
 const [secons, lessons] = getDuration(modules)
 //console.log(modulesOrder, modules)
-const user = JSON.parse(localStorage.getItem('user'))
-let isEnrolled
-if(enrolled[user._id]) isEnrolled = true;
-if(!modulesOrder || !modules) return null
+// const user = JSON.parse(localStorage.getItem('user'))
+// let isEnrolled
+// if(enrolled[user._id]) isEnrolled = true;
+// if(!modulesOrder || !modules) return null
 return (
 
     <div className="courses">
@@ -54,11 +54,11 @@ return (
                             </button>
                             </Link>
                             :
-                            <Link to={`/courses/${_id}/pay`} >
-                            <button className="btn_iniciar">
+                            // <Link to={`/courses/${_id}/pay`} >
+                            <button disabled={loading} onClick={enroll} className="btn_iniciar">
                                 Comenzar
                             </button>
-                            </Link>
+                            // </Link>
                         }
                     </div></div>
                 </div>

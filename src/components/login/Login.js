@@ -3,11 +3,19 @@ import './Login.css';
 import {LoginDisplay} from './LoginDisplay';
 import { signInWithGoogle, signInWithFacebook, logInWithEmail } from '../../services/firebase';
 import toastr from 'toastr'
+import queryString from 'query-string'
 
 class Login extends Component {
 
     componentWillMount(){
         this.getUser()
+    }
+
+    decideRoute = () => {
+        const parsed = queryString.parse(this.props.location.search);
+        console.log(parsed)
+        if(parsed.next) return this.props.history.push(parsed.next)
+        this.props.history.push('/profile')
     }
 
     getUser = () => {
@@ -18,7 +26,7 @@ class Login extends Component {
     googleLogin = () => {
         signInWithGoogle()
         .then(user=>{
-            this.props.history.push('/profile')
+            this.decideRoute()
         })
         .catch(e=>{
             console.log(e)
@@ -29,7 +37,7 @@ class Login extends Component {
     facebookLogin = () => {
         signInWithFacebook()
         .then(user=>{
-            this.props.history.push('/profile')
+            this.decideRoute()
         })
         .catch(e=>{
             console.log(e)
@@ -45,7 +53,7 @@ class Login extends Component {
         }
         logInWithEmail(auth)
         .then(user=>{
-            this.props.history.push('/profile')
+            this.decideRoute()
         })
         .catch(e=>{
             console.log(e)
