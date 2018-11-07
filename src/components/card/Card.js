@@ -33,7 +33,7 @@ class Card extends Component {
 
                 <div className="card"> <Link to={`/courses/${_id}`} >
                     <div className="container_img">
-                        <Tooltip title="Al concluir el curso podrás descargar tu certificado">
+                        <Tooltip title="Al concluir el curso descargaras tu certificado">
                             <img src={batch} alt=""/>
                         </Tooltip>,
 

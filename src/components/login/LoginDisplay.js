@@ -30,12 +30,12 @@ export const LoginDisplay = ({emailLogin, googleLogin, facebookLogin}) => (
                         <input name="email" type="text" placeholder="E-mail"/>
                         <label htmlFor="">Password</label>
                         <input name="password" type="password" placeholder="Password"/>
-                        
+
                         <button className="btn_signin">Log in</button>
-                       
+
                     </form>
                     <p className="forget">¿Olvidaste tu contraseña? <a href="/">Has clic aquí</a></p>
-                    <br/>
+
                     <div className="or">
                         <hr className="divide"/> <span style={{margin:"0 10px"}}>Or</span>
                         <hr className="divide"/>

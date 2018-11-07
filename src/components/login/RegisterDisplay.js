@@ -105,7 +105,8 @@ export class RegisterDisplay extends React.Component {
                         {errors.password && <span className="error-message">{errors.password}</span>}
                         </label>
                         <input name="password2" type="password" placeholder="Password"/>
-                       
+                        <br/>
+                        <br/>
                         <button className="btn_signin">Registrar</button>
                         <p className="forget">Ya tienes una cuenta? <Link to="/login">Has clic aquí</Link></p>
                     </form>

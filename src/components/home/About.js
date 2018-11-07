@@ -13,7 +13,7 @@ class About extends Component {
                         <p style={{fontSize:"18px"}}>
                             La tecnología se mueve tan rápido, que en ocasiones,
                             a pesar de la pasión u curiosidad que sientes por ella,
-                            es difícil aprender y actualizarte debido a la gran
+                            es difícil aprender y actualizarse debido a la gran
                             cantidad de información que encontramos en la web o en
                             libros, y a lo dispersa que esta información se
                             encuentra.
@@ -23,10 +23,10 @@ class About extends Component {
                             “FirebaseMx Learning Platform”, una plataforma única
                             en donde encontraras cursos, ejercicios y artículos
                             sobre Firebase: el backend as a service de google.
-                            Tal vez te preguntes que es Firebase? Es un backend
+                            Tal vez te preguntes ¿Qué es Firebase? Es un backend
                             que permite la creación de apps de forma ágil,
                             minimizando el tiempo de desarrollo mediante
-                            funciones especificas, detección de errores y
+                            funciones específicas, detección de errores y
                             testing, ademas de permitirte la monetización
                             de tus aplicaciones mediante AdMob.
                         </p>

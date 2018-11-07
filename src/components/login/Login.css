@@ -1,7 +1,8 @@
 .log{
     width:100%;
-    height:100vh;
+
     background-color: #181818;
+
 }
 .items{
     width:100%;
@@ -11,20 +12,22 @@
     align-items: center;
 }
 .log_form{
+    padding: 20px 0;
     width:400px;
     flex-grow: 1;
     background-color: #181818;
+
 }
 .log_img{
     width:400px;
     flex-grow: 1;
-    height:100vh;
+
     background-size: cover;
     background-position: center;
     background-image: url('https://images.pexels.com/photos/517884/pexels-photo-517884.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
 }
 .log_img {
-    height:100%;
+    height:100vh;
     color:white;
     font-size:50px;
     display: flex;
@@ -41,7 +44,8 @@
     margin: 0 auto;
 }
 .logbox img{
-    width:100%;
+    width:70%;
+    margin-left: 15%;
     height:auto;
 }
 .formulario{
@@ -57,7 +61,7 @@
 }
 .formulario input, .form_r input{
     width:100%;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
     color:#ccc;
     background: #181818;
     border:1px solid #555;
@@ -151,7 +155,7 @@
 }
 .form_r{
     width:80%;
-    margin: 0 auto;
+    margin: 70px auto;
 }
 .log a:hover, .registro a:hover{
     color: #ffa711;
