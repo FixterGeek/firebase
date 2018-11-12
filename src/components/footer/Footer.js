@@ -29,7 +29,7 @@ class Footer extends Component {
                         <a href="https://twitter.com/FirebaseMx" target="blank">
                             <FontAwesome name="twitter-square"/>
                         </a>
-                        <a href="https://github.com/FirebaseMx" target="_blank">
+                        <a href="https://github.com/FirebaseMx" target="blank">
                             <FontAwesome name="github-square"/>
                         </a>
                         <a href="https://www.linkedin.com/company/firebase-mexico/" target="blank">

@@ -69,11 +69,18 @@
     flex-wrap: wrap;
     justify-content: space-between;
 }
-@media(max-width: 430px){
+.st{
+    color:#ffa711;
+}
+@media(max-width: 435px){
     .perfil .fl{
         width: 100%;
+        justify-content: center;
     }
     .titulo{
         font-size: 28px;
+    }
+    .cursos_box{
+        justify-content: center;
     }
 }

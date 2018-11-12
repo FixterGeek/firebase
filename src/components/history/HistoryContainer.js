@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './History.css';
 import Nav from '../nav/Nav';
-import Footer from '../footer/Footer';
 
 class HistoryContainer extends Component {
     componentDidMount () {
