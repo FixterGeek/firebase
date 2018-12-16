@@ -4,7 +4,7 @@ import {PayFormDisplay} from './PayFormDisplay';
 import firebase, {paymentAccepted, getCourseInfo, applyCoupon} from '../../services/firebase';
 import toastr from 'toastr'
 //import * as Conekta from '../../services/conekta'
-import Conekta from '../../services/conekta'
+import Conekta, {makeOrder} from '../../services/conekta'
 
 
 
@@ -12,6 +12,7 @@ class PayForm extends Component {
 
     state = {
         loading:false,
+        token:null,
         course:{
             price: 1250
         },
@@ -96,8 +97,23 @@ class PayForm extends Component {
         //Conekta.setPublicKey('key_Ik4WxMhXctrriTvyfMAimyg');
         this.state.conekta.api.Token.create({card:this.state.card}, token=>{
             console.log(token)
+            this.setState({ token})
+
+            //send to server
+            makeOrder(token)
+                .then(res=>{
+                    console.log(res)
+                    if(res.object ==="error") toastr.error(res.type)
+                })
+                .catch(e=>console.log(e))
+            //server add the course in success, then redirect to course detail
+
+
+        }, err=>{
+            console.log(err)
+            toastr.error(err.message)
             this.setState({loading:false})
-        }, err=>console.log(err));
+        });
         //una vez aceptado el pago, enrolamos al usuario
 
         /** se usa cloud function!! en el servicio ;) */

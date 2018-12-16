@@ -7,9 +7,10 @@ import Card from '../card/Card';
 import {Button} from 'antd'
 import { Link } from 'react-router-dom';
 
-export const ProfileDisplay = ({user}) => {
+export const ProfileDisplay = ({user={}}) => {
    const {photoURL, displayName, email, uid} = user
-   const enrolled = Object.keys(user.enrolled)
+   let enrolled = []
+    if(user.enrolled) enrolled = Object.keys(user.enrolled)
    //se tienen que traer los cursos de la bd
    console.log(enrolled)
 return(

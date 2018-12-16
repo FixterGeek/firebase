@@ -1,4 +1,6 @@
+import axios from 'axios'
 const script = document.createElement('script')
+const conektaURL = ""
 
 class Conekta{
   constructor(publicKey){
@@ -27,6 +29,18 @@ class Conekta{
 
 
   
+}
+
+export const makeOrder = (token, courseId)=>{
+  const url = "https://us-central1-reactfirebase-b16aa.cloudfunctions.net/makeCharge"
+  return axios.post(url, {
+    token,
+    courseId
+  })
+      .then(res=>{
+        console.log(res)
+        return res.data
+      })
 }
 
 

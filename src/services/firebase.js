@@ -3,6 +3,7 @@ import firebase from 'firebase/app'
 import "firebase/firestore"
 import 'firebase/database'
 import 'firebase/auth'
+import 'firebase/storage'
 //fetching
 import axios from 'axios'
 
@@ -68,7 +69,7 @@ const config = {
   }
 
   export const getCourseInfo = (id) => {
-    return coursesRef.doc(id).get()
+    return coursesInfoRef.doc(id).get()
     .then(doc=>{
       return courseInfo(doc.data())
     })

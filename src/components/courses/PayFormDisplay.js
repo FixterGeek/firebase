@@ -3,8 +3,20 @@ import './Courses.css';
 import Nav from '../nav/Nav';
 import log from '../../assets/bootcamp.png';
 import {Spin} from 'antd'
+import Cleave from 'cleave.js/react';
+
 
 let cupon = ''
+
+function onCreditCardFocus(){}
+
+function onCreditCardChange(event) {
+    // formatted pretty value
+    console.log(event.target.value);
+
+    // raw value
+    console.log(event.target.rawValue);
+}
 
 export const PayFormDisplay= ({course, pagar, onChange, errors, loading, applyCupon}) => {
     let {coupon={}, price} = course
@@ -24,7 +36,14 @@ export const PayFormDisplay= ({course, pagar, onChange, errors, loading, applyCu
                         <label htmlFor="">Nombre del titular</label>
                         <input onChange={onChange} name="name" type="text" placeholder="Nombre completo"/>
                         <label htmlFor="">Numero de tarjeta</label>
-                        <input onChange={onChange} name="number"  type="text" placeholder="---- ---- ---- ----"/>
+
+                        <Cleave placeholder="---- ---- ---- ----"
+                                options={{creditCard: true}}
+                                onFocus={this.onCreditCardFocus}
+                                name="number"
+                                //type="text"
+                                onChange={onChange} />
+
                         <div style={{display:"flex"}}>
                             <div className="mitad">
                                 <label htmlFor="">Fecha de expiracion</label><br/>
