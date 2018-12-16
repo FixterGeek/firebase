@@ -49,11 +49,11 @@ class Nav extends Component {
         return (
             <div className="nav">
                 <Link to="/">
-                    <img src={logo} alt="logo"/>
+                    <img className="logo" src={logo} alt="logo"/>
                 </Link>
                 <div>
                     <Link to="/courses">
-                        <button>Empezar</button>
+                        <button>Explorar</button>
                     </Link>
                     <hr/>
                     {!user ? <Link to="/login">

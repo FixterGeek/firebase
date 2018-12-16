@@ -12,7 +12,7 @@ export const CardProfileDisplay = ({user}) => (
         <br/>
         <p className="user_name">{user.displayName}</p>
         <p className="user_job"><FontAwesome name="briefcase"/> USUARIO PREMIUM</p>
-        <p className="user_descript">Pollo pollollon pollencio</p>
+        <p className="user_descript">{user.email}</p>
 
     </div>
 );

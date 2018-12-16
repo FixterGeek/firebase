@@ -10,7 +10,7 @@
 .nav a, .nav a:hover, .nav a:focus{
     color:inherit;
 }
-.nav img{
+.nav .logo{
     width:auto;
     height:75px;
     margin-left: 20px;
@@ -88,7 +88,7 @@
 .img_nav{
     width:40px;
     height:40px;
-    border-radius: 20px;
+    border-radius:50%;
     overflow: hidden;
     background-color: gray;
     margin: 0 10px;
@@ -130,7 +130,24 @@
     color:  #ffa711 !important;
     background-color: transparent !important;
 }
+.nav-perfil input:focus{
+    outline:0px;
 
+}
+.user_nav button{
+    height:30px;
+    width:100px;
+    background-color: #ffa711;
+    border: 1px solid #ffa711;
+    color:white;
+    cursor: pointer;
+}
+
+.user_nav hr{
+    height:30px;
+    opacity: .3;
+    margin: 0 15px;
+}
 @media(max-width: 435px){
     .none{
         display: none;
