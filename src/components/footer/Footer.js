@@ -26,17 +26,18 @@ class Footer extends Component {
                         <a href="https://www.facebook.com/firebasemexico/" target="blank">
                             <FontAwesome name="facebook-square"/>
                         </a>
-                        <a href="https://twitter.com/FirebaseMexico_" target="blank">
+                        <a href="https://twitter.com/FirebaseMx" target="blank">
                             <FontAwesome name="twitter-square"/>
                         </a>
-                        <a href="">
+                        <a href="https://github.com/FirebaseMx" target="blank">
                             <FontAwesome name="github-square"/>
                         </a>
                         <a href="https://www.linkedin.com/company/firebase-mexico/" target="blank">
                             <FontAwesome name="linkedin"/>
                         </a>
-
-                        <FontAwesome name="youtube"/>
+                        <a href="https://www.youtube.com/channel/UCdWvvGBWkMUsEaiIQRo6ZHw?view_as=subscriber" target="blank">
+                            <FontAwesome name="youtube"/>
+                        </a>
                     </div>
                 </div>
                 <div className="copy" >

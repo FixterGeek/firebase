@@ -42,7 +42,7 @@ class NavProfile extends Component {
                     <Link to="/">
                         <img src={logo} alt="logo"/>
                     </Link>
-                    <div>
+                    <div className="none">
                         <input type="text" placeholder="Buscar..."/>
                         <FontAwesome name="search"/>
                     </div>

@@ -11,7 +11,7 @@ export const CoursesDisplay = ({courses}) => (
         <Nav />
         <div style={{padding:"100px 0"}}>
             <h2 className="tittle " style={{textAlign:"center"}}> Todos los cursos</h2>
-            <div className="fl">
+            <div className="fl" style={{justifyContent:"center"}}>
                 {courses.map((c,i)=><Card key={i} {...c} />)}
             </div>
         </div>

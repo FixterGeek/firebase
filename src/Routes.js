@@ -16,7 +16,6 @@ import Eventos from './components/event/Eventos';
 import Contacto from './components/contacto/Contacto';
 import HistoryDisplay from './components/history/HistoryContainer';
 import PayForm from './components/courses/PayForm';
-
 const Routes = () => (
     <Switch>
         <Route exact path="/" component={HomeContainer} />
@@ -37,6 +36,7 @@ const Routes = () => (
         <Route path="/admin/courses/new" component={NewCourse} />
         <Route exact path="/admin/courses/" component={CoursesPage} />
         <Route path="/admin/courses/:id" component={CourseDetail} />
+
     </Switch>
 );
 

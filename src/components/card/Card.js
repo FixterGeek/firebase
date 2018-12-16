@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './Card.css';
 import FontAwesome from 'react-fontawesome';
+import batch from '../../assets/bootcamp.png';
 import cover from '../../assets/bootcamp.png';
 import {Link} from 'react-router-dom';
+import { Tooltip } from 'antd';
 
 function getDuration(modules){
     let lessons = 0
@@ -24,19 +26,26 @@ const pic = "https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/29388325_1573144522
 
 class Card extends Component {
     render() {
-        const {title, modulesOrder, author, modules, _id} = this.props
+        const {title, modulesOrder, author={}, modules, _id} = this.props
         const {displayName, photoURL} = author
         const [secons, lessons] = getDuration(modules)
         return (
 
                 <div className="card"> <Link to={`/courses/${_id}`} >
                     <div className="container_img">
+                        <Tooltip title="Al concluir el curso descargaras tu certificado">
+                            <img src={batch} alt=""/>
+                        </Tooltip>,
+
                         <img src={cover} alt={title}/>
                     </div>
 
                     <p className="clase">Course &bull; Firebase</p>
 
                     <h3>{title}</h3>
+                    <br/>
+                    <hr className="line-gris"/>
+
                     <div className="data">
                         <div style={{display:"flex"}}>
                             <img className="autor_img" src={photoURL || pic} alt={displayName}/>
@@ -45,7 +54,7 @@ class Card extends Component {
                                 <p className="duracion">{lessons} lecciones &bull; {Math.floor(secons / 60)} minutos</p>
                             </div>
                         </div>
-                        <FontAwesome style={{color:"#363636"}} name="cog"/>
+                        <FontAwesome style={{color:"#bdbfc2"}} name="cog"/>
 
                     </div>
                 </Link>
