@@ -164,13 +164,13 @@ exports.enrollFreeUser =  functions.https.onRequest((req, res) => {
   console.log(req.body)
   //enrolling
   cors(req,res,()=>{
-    const course = admin.firestore().collection('courses').doc(req.body.courseId)
-    const user = admin.firestore().collection('users').doc(req.body.userId)
+    const course = admin.firestore().collection('courses').doc(req.body.courseId);
+    const user = admin.firestore().collection('users').doc(req.body.userId);
     Promise.all([user.get(), course.get()])
     .then(result=>{
-      const u = result[0].data()
-      const c = result[1].data()
-      console.log("user: ", u)
+      const u = result[0].data();
+      const c = result[1].data();
+      console.log("user: ", u);
       console.log("course: ", c)
       if(!c.enrolled) c.enrolled={}
       if(!u.enrolled) u.enrolled={}
