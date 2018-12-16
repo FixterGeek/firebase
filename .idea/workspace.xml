@@ -3,7 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="646fad71-13c2-48de-a076-ac02b74a4150" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileDisplay.js" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/functions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/functions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/admin/CoursesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/admin/CoursesPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/courses/PayForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/courses/PayForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/courses/PayFormDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/courses/PayFormDisplay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav/Nav.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/profile/ProfileDisplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/profile/ProfileDisplay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/conekta.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/conekta.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/firebase.js" afterDir="false" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,6 +31,7 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+<<<<<<< HEAD
   <component name="FUSProjectUsageTrigger">
     <session id="799008177">
       <usages-collector id="statistics.lifecycle.project">
@@ -63,10 +78,23 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
               <caret line="31" column="72" selection-start-line="31" selection-start-column="72" selection-end-line="31" selection-end-column="72" />
+=======
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/courses/PayForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="105" column="62" selection-start-line="105" selection-start-column="62" selection-end-line="105" selection-end-column="62" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/history/HistoryContainer.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -75,22 +103,37 @@
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/functions/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="591">
+              <caret line="128" column="46" lean-forward="true" selection-start-line="128" selection-start-column="46" selection-end-line="128" selection-end-column="46" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/components/admin/NewCourse.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
+=======
+        <entry file="file://$PROJECT_DIR$/src/services/conekta.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/components/admin/Module.js">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -160,6 +203,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1395">
               <caret line="93" selection-start-line="93" selection-end-line="93" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/components/courses/PayFormDisplay.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="660">
+              <caret line="44" column="54" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
             </state>
           </provider>
         </entry>
@@ -187,7 +239,13 @@
       <find>.ant-dropdown-menu-item</find>
       <find>ccc</find>
       <find>fac</find>
+<<<<<<< HEAD
       <find>fl</find>
+=======
+      <find>firebase</find>
+      <find>charg</find>
+      <find>conekta</find>
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -196,8 +254,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/components/event/Evento.js" />
         <option value="$PROJECT_DIR$/src/components/event/Eventos.js" />
+=======
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         <option value="$PROJECT_DIR$/src/components/contacto/contacto.js" />
         <option value="$PROJECT_DIR$/src/components/event/Eventos.css" />
         <option value="$PROJECT_DIR$/src/components/contacto/Contacto.js" />
@@ -215,10 +276,14 @@
         <option value="$PROJECT_DIR$/src/components/event/CardEvent.js" />
         <option value="$PROJECT_DIR$/src/components/event/EventosDisplay.js" />
         <option value="$PROJECT_DIR$/src/components/courses/ViewVideoDisplay.js" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/components/courses/PayForm.js" />
         <option value="$PROJECT_DIR$/src/components/courses/PayFormDisplay.js" />
+=======
+        <option value="$PROJECT_DIR$/src/Routes.js" />
+        <option value="$PROJECT_DIR$/src/components/login/Login.css" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/components/nav/Nav.js" />
         <option value="$PROJECT_DIR$/src/components/home/Slide.js" />
         <option value="$PROJECT_DIR$/src/components/home/Courses.js" />
         <option value="$PROJECT_DIR$/src/components/home/Startups.js" />
@@ -237,6 +302,7 @@
         <option value="$PROJECT_DIR$/src/components/contacto/Contacto.css" />
         <option value="$PROJECT_DIR$/src/components/courses/CoursesDisplay.js" />
         <option value="$PROJECT_DIR$/src/components/login/LoginDisplay.js" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/components/login/Login.css" />
         <option value="$PROJECT_DIR$/src/components/login/RegisterDisplay.js" />
         <option value="$PROJECT_DIR$/src/components/card/Card.js" />
@@ -247,12 +313,20 @@
         <option value="$PROJECT_DIR$/src/components/history/HistoryContainer.js" />
         <option value="$PROJECT_DIR$/src/components/admin/CoursesPage.js" />
         <option value="$PROJECT_DIR$/src/components/profile/ProfileDisplay.js" />
+=======
+        <option value="$PROJECT_DIR$/src/components/profile/Profile.js" />
+        <option value="$PROJECT_DIR$/src/components/profile/ProfileDisplay.js" />
+        <option value="$PROJECT_DIR$/src/components/admin/CoursesPage.js" />
+        <option value="$PROJECT_DIR$/src/components/nav/Nav.js" />
+        <option value="$PROJECT_DIR$/src/components/admin/ResourceForm.js" />
+        <option value="$PROJECT_DIR$/src/services/firebase.js" />
+        <option value="$PROJECT_DIR$/src/components/courses/PayFormDisplay.js" />
+        <option value="$PROJECT_DIR$/functions/index.js" />
+        <option value="$PROJECT_DIR$/src/components/courses/PayForm.js" />
+        <option value="$PROJECT_DIR$/src/services/conekta.js" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
       </list>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
-    <package-json value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>false</service-enabled>
@@ -260,6 +334,7 @@
     <annotation-enable>false</annotation-enable>
     <other-services-enabled>false</other-services-enabled>
   </component>
+<<<<<<< HEAD
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -279,12 +354,23 @@
     <option name="y" value="23" />
     <option name="width" value="1229" />
     <option name="height" value="723" />
+=======
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="61" />
+    <option name="y" value="23" />
+    <option name="width" value="1567" />
+    <option name="height" value="994" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,6 +381,14 @@
             <path>
               <item name="firebase" type="b2602c69:ProjectViewProjectNode" />
               <item name="firebase" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+              <item name="functions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="firebase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="firebase" type="462c0819:PsiDirectoryNode" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -315,6 +409,16 @@
               <item name="firebase" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+              <item name="card" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="firebase" type="b2602c69:ProjectViewProjectNode" />
+              <item name="firebase" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
               <item name="courses" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -322,13 +426,22 @@
               <item name="firebase" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="profile" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="nav" type="462c0819:PsiDirectoryNode" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
             </path>
             <path>
               <item name="firebase" type="b2602c69:ProjectViewProjectNode" />
               <item name="firebase" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="correos" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="profile" type="462c0819:PsiDirectoryNode" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
             </path>
             <path>
               <item name="firebase" type="b2602c69:ProjectViewProjectNode" />
@@ -340,18 +453,29 @@
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+=======
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="$USER_HOME$/.nvm/versions/node/v8.11.1/bin/node" />
     <property name="js.eslint.eslintPackage" value="$PROJECT_DIR$/node_modules/eslint" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+<<<<<<< HEAD
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+=======
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
     <property name="settings.editor.selected.configurable" value="usage.statistics" />
   </component>
   <component name="RecentsManager">
@@ -373,10 +497,14 @@
     </option>
   </component>
   <component name="RunManager">
+<<<<<<< HEAD
     <configuration name="PayFormDisplay.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-js-file="PayFormDisplay.js" working-dir="$PROJECT_DIR$/src/components/courses">
+=======
+    <configuration name="PayFormDisplay.js" type="NodeJSConfigurationType" temporary="true" path-to-js-file="PayFormDisplay.js" working-dir="$PROJECT_DIR$/src/components/courses">
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
       <method v="2" />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+    <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
@@ -416,6 +544,7 @@
       <workItem from="1534804368829" duration="7000" />
       <workItem from="1534955345755" duration="1545000" />
       <workItem from="1536801060006" duration="5095000" />
+<<<<<<< HEAD
       <workItem from="1536806983358" duration="299000" />
       <workItem from="1537323831576" duration="2742000" />
       <workItem from="1537402034739" duration="7134000" />
@@ -424,10 +553,15 @@
       <workItem from="1541565508915" duration="2343000" />
       <workItem from="1542058137580" duration="2096000" />
       <workItem from="1544849614498" duration="692000" />
+=======
+      <workItem from="1536806983358" duration="245000" />
+      <workItem from="1544031070029" duration="10243000" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="97128000" />
   </component>
   <component name="ToolWindowManager">
@@ -437,6 +571,18 @@
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
+=======
+    <option name="totallyTimeSpent" value="90183000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="80" y="23" width="1840" height="1177" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1671248" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32909605" />
@@ -447,12 +593,16 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+=======
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
@@ -467,6 +617,23 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1671248" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32909605" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.32909605" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -475,6 +642,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -525,11 +693,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="13" column="169" selection-start-line="13" selection-start-column="169" selection-end-line="13" selection-end-column="169" />
+=======
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/node_modules/antd/dist/antd.css" />
+    <entry file="file://$PROJECT_DIR$/src/components/event/Eventos.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="80" column="72" selection-start-line="80" selection-start-column="72" selection-end-line="80" selection-end-column="72" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/courses/PayForm.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="34">
           <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
         </state>
@@ -539,18 +716,28 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="812">
           <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+=======
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="8" selection-end-column="5" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="589">
           <caret line="31" selection-start-line="31" selection-end-line="31" />
+=======
+        <state relative-caret-position="119">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="323">
           <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
         </state>
@@ -558,16 +745,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor" />
+=======
+        <state relative-caret-position="51">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/event/CardEvent.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/home/Courses.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="247">
           <caret line="16" column="63" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
+=======
+        <state relative-caret-position="34">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/home/Startups.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="114">
           <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
         </state>
@@ -591,11 +797,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+=======
+        <state relative-caret-position="170">
+          <caret line="13" column="169" selection-start-line="13" selection-start-column="169" selection-end-line="13" selection-end-column="169" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/correos/Welcome.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="5757">
           <caret line="316" column="158" selection-end-line="404" selection-end-column="7" />
         </state>
@@ -613,75 +824,144 @@
           <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
+=======
+        <state relative-caret-position="58">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/card/Card.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="165">
           <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+=======
+        <state relative-caret-position="19">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/history/History.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="33">
           <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+=======
+        <state relative-caret-position="57">
+          <caret line="10" selection-start-line="10" selection-end-line="13" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/footer/Footer.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="645">
           <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+=======
+        <state relative-caret-position="323">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="150">
           <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="303">
+          <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/contacto/Contacto.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="30">
           <caret line="2" column="14" selection-start-line="2" selection-end-line="3" />
+=======
+        <state relative-caret-position="247">
+          <caret line="16" column="63" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/login/Login.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="30">
           <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+=======
+        <state relative-caret-position="114">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/login/LoginDisplay.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="615">
           <caret line="45" column="27" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="45" selection-end-column="27" />
+=======
+        <state relative-caret-position="570">
+          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/courses/CoursesDisplay.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="165">
           <caret line="13" column="62" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+=======
+        <state relative-caret-position="391">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/courses/Courses.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="4635">
           <caret line="309" column="7" selection-start-line="309" selection-start-column="5" selection-end-line="309" selection-end-column="7" />
+=======
+        <state relative-caret-position="551">
+          <caret line="30" column="18" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="18" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/courses/Courses.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state>
           <caret selection-end-line="19" />
         </state>
@@ -698,6 +978,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+=======
+        <state relative-caret-position="95">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
@@ -710,13 +994,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/nav/Nav.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="437">
           <caret line="133" column="11" selection-start-line="133" selection-start-column="11" selection-end-line="133" selection-end-column="11" />
+=======
+        <state relative-caret-position="285">
+          <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/home/About.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="341">
           <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
         </state>
@@ -726,32 +1016,57 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+=======
+        <state>
+          <caret selection-end-line="16" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/home/HomeContainer.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="330">
           <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="26" />
+=======
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/login/Login.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2205">
           <caret line="147" column="29" selection-start-line="147" selection-start-column="21" selection-end-line="147" selection-end-column="29" />
+=======
+        <state relative-caret-position="3306">
+          <caret line="174" column="25" selection-start-line="174" selection-start-column="25" selection-end-line="174" selection-end-column="25" />
+          <folding />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/login/RegisterDisplay.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1560">
           <caret line="108" column="29" selection-start-line="108" selection-start-column="29" selection-end-line="108" selection-end-column="29" />
+=======
+        <state relative-caret-position="570">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+          <folding />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/profile/CardProfileDisplay.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="135">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
@@ -768,25 +1083,148 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
           <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="18" />
+=======
+        <state relative-caret-position="817">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/login/LoginDisplay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="19" column="78" selection-start-line="19" selection-start-column="78" selection-end-line="19" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/profile/CardProfileDisplay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/profile/Profile.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="195">
           <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+=======
+        <state relative-caret-position="135">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/profile/Profile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="66" column="13" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/login/RegisterDisplay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/login/Login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="94" column="28" selection-start-line="94" selection-start-column="28" selection-end-line="94" selection-end-column="28" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/home/Home.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1395">
           <caret line="93" selection-start-line="93" selection-end-line="93" />
+=======
+        <state relative-caret-position="798">
+          <caret line="305" column="16" selection-start-line="305" selection-start-column="16" selection-end-line="305" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/profile/Profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/firebase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="71" column="39" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="39" />
+          <folding>
+            <element signature="e#60#87#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/admin/ResourceForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/nav/Nav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/courses/Courses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/courses/CourseDetailContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="30" column="21" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/card/Card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="26" column="59" selection-start-line="26" selection-start-column="59" selection-end-line="26" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/courses/CoursesDisplay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/admin/CoursesPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/history/HistoryContainer.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="390">
           <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
@@ -800,19 +1238,42 @@
         <state>
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+=======
+        <state relative-caret-position="126">
+          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/nav/NavProfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="83" selection-start-line="29" selection-start-column="71" selection-end-line="29" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/components/admin/NewCourse.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="e#0#40#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/components/courses/PayFormDisplay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="54" selection-start-line="44" selection-start-column="54" selection-end-line="44" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/Routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -829,10 +1290,26 @@
           <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/services/conekta.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/courses/PayForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="105" column="62" selection-start-line="105" selection-start-column="62" selection-end-line="105" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/components/profile/ProfileDisplay.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -840,6 +1317,12 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/functions/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="128" column="46" lean-forward="true" selection-start-line="128" selection-start-column="46" selection-end-line="128" selection-end-column="46" />
+>>>>>>> d42ff3b037ca657e16dab7395e8bfaed12808716
         </state>
       </provider>
     </entry>

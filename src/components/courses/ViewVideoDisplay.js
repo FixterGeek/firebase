@@ -17,10 +17,15 @@ export class ViewVideoDisplay extends React.Component{
     }
 
     componentWillMount(){
-        const courseId = this.props.match.params.courseId;
-        const moduleId = this.props.match.params.moduleId;
-        const materialId = this.props.match.params.materialId;
-        if(!courseId || !moduleId || !materialId) this.props.history.push('/courses')
+        const courseId = this.props.match.params.courseId 
+        const moduleId = this.props.match.params.moduleId 
+        const materialId = this.props.match.params.materialId
+        if(!courseId) return this.props.history.push('/courses')
+        if(!moduleId || !materialId){
+            this.setState({courseId})
+            this.getCourse(courseId)
+            return 
+        }
         this.setState({courseId, moduleId, materialId})
         this.getCourse(courseId, moduleId, materialId)
     }
@@ -28,9 +33,7 @@ export class ViewVideoDisplay extends React.Component{
     getCourse = (courseId, moduleId, materialId) => {
         getCourse(courseId)
         .then(course=>{
-            console.log(course)
-            const currentVideoLink =  course.modules[moduleId].materials[materialId].link
-            console.log(currentVideoLink)
+            const currentVideoLink = moduleId ? course.modules[moduleId].materials[materialId].link : null
             this.setState({course, currentVideoLink})
         })
         .catch(e=>{

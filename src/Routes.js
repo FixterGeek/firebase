@@ -26,6 +26,7 @@ const Routes = () => (
         <Route exact path="/courses" component={Courses}/>
         <Route exact path="/courses/:id" component={CourseDetailContainer} />
         <Route path="/courses/:courseId/:moduleId/:materialId" component={ViewVideoDisplay} />
+        <Route path="/courses/:courseId/view" component={ViewVideoDisplay} />
         <Route path="/events" component={Eventos}/>
         <Route path="/contact" component={Contacto}/>
         <Route path="/history" component={HistoryDisplay}/>

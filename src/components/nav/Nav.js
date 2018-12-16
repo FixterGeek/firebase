@@ -2,9 +2,50 @@ import React, { Component } from 'react';
 import './Nav.css';
 import logo from '../../assets/firemx.png';
 import {Link} from 'react-router-dom';
+import FontAwesome from "react-fontawesome";
+import { Menu, Dropdown,
+    //  Icon
+} from 'antd';
+
+const pic = "https://secure.meetupstatic.com/photos/event/d/6/f/5/600_465595029.jpeg"
+
+const menu = (
+    <Menu>
+        <Menu.Item key="0">
+            <Link to="/profile">Perfil</Link>
+        </Menu.Item>
+        <Menu.Item key="0">
+            <Link to="/courses">Todos los Cursos</Link>
+        </Menu.Item>
+        <Menu.Item key="1">
+            <Link to="/profile/history">Historial</Link>
+        </Menu.Item>
+        <Menu.Divider />
+        <Link to="/login">
+            <Menu.Item style={{color:" #ccc", marginLeft:"10px"}} onClick={closeSession} key="3">Cerrar Sesión</Menu.Item>
+        </Link>
+    </Menu>
+);
+
+const closeSession = () => {
+    localStorage.removeItem('user')
+}
 
 class Nav extends Component {
+
+    state:{
+        user:null
+    };
+
+    componentWillMount() {
+        const user = JSON.parse(localStorage.getItem('user'))
+        this.setState({user})
+
+    }
+
     render() {
+        const {user} = this.state
+        const {displayName, photoURL} = user
         return (
             <div className="nav">
                 <Link to="/">
@@ -15,9 +56,18 @@ class Nav extends Component {
                         <button>Empezar</button>
                     </Link>
                     <hr/>
-                    <Link to="/login">
+                    {!user ? <Link to="/login">
                         <span>Log in</span>
-                    </Link>
+                    </Link>:
+                        <div className="user_nav">
+                            <p>{displayName}</p>
+                            <div className="img_nav">
+                                <img src={photoURL || pic} alt={displayName}/>
+                            </div>
+                            <Dropdown overlay={menu} trigger={['click']}>
+                                <FontAwesome name="angle-down"/>
+                            </Dropdown>
+                        </div>}
                 </div>
             </div>
         );

@@ -20,6 +20,7 @@ class Profile extends Component {
 
     render() {
         const {user} = this.state
+        console.log(user)
         return (
             <div className="profile">
                 <ProfileDisplay user={user} />
