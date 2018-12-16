@@ -17,15 +17,6 @@ return(
             <div className="profile_cursos">
 
                 <div className="cursos_box">
-                {enrolled.map((c,index)=>{
-                    return (
-                        <div>
-                            <h2>Mis cursos</h2>
-                            <br/>
-                        <Card key={index} {...c} /></div>
-                    )
-                })}
-                {enrolled.length < 1 && <div><h2 style={{color:"#ccc",  fontFamily: 'Muli'}}>Consigue tu primer curso <Link to="/courses" className="st">¡Ahora!</Link></h2></div> }
 
 
             </div>
