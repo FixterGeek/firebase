@@ -2,7 +2,6 @@ import React from "react";
 import "./Profile.css";
 import { Link } from "react-router-dom";
 //import logo from '../../assets/firemx.png';
-
 import NavProfile from "../nav/NavProfile";
 import { CardProfileDisplay } from "./CardProfileDisplay";
 import Card from "../card/Card";
@@ -38,13 +37,11 @@ export const ProfileDisplay = ({ user = {} }) => {
 
                 <div className="cursos_box">
 
-
+                </div>
+                </div>
             </div>
-            </div>
+    
         </div>
-				<div className="cursos_box" />
-				</div>
-			</div>
-		</div>
+
 	);
 };
