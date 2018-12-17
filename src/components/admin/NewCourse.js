@@ -231,83 +231,93 @@ class NewCourse extends Component {
     const { course, preview } = this.state;
     const { title, modulesOrder, modules, badge = preview } = course;
     return (
-      <DragDropContext onDragEnd={this.onDragEnd}>
-        <Droppable droppableId="all-modules" type="module" direction="vertical">
-          {(provided, snapshot) => (
-            <div
-              {...provided.droppableProps}
-              ref={provided.innerRef}
-              style={{
-                background: snapshot.isDraggingOver ? "lightblue" : "inherit"
-              }}
-            >
-              <nav>
-                <article style={{ display: "flex" }}>
-                  <Input
-                    name="title"
-                    value={title}
-                    onChange={this.changeName}
-                  />
-                  <FontAwesome
-                    onClick={() => this.saveCourse(course, true)}
-                    name="save"
-                    size="2x"
-                    style={{
-                      cursor: "pointer",
-                      color: "green",
-                      marginLeft: 5,
-                      textShadow: "0 1px 0 rgba(0, 0, 0, 0.1)"
-                    }}
-                  />
-                </article>
-                <Button onClick={this.addModule} type="primary">
-                  Agregar modulo
-                </Button>
-              </nav>
-              <div className="modules-container">
-                <article>
-                  <input
-                    onChange={this.previewImage}
-                    ref={input => (this.input = input)}
-                    hidden
-                    type="file"
-                  />
-                  <img
-                    style={{ width: 300, cursor: "pointer" }}
-                    onClick={() => this.input.click()}
-                    src={badge}
-                    alt="preview"
-                  />
-                </article>
+      <div className="contain-new">
+        <div className="wlc">
+           <h2 style={{color:"white", opacity:".5", marginBottom:"0"}}>Agrega / Edita el curso</h2>
+        </div> 
+        <DragDropContext onDragEnd={this.onDragEnd}>
+          <Droppable droppableId="all-modules" type="module" direction="vertical">
+            {(provided, snapshot) => (
+              <div
+                {...provided.droppableProps}
+                ref={provided.innerRef}
+                style={{
+                  background: snapshot.isDraggingOver ? "#424242" : "inherit"
+                }}
+              >
+                <nav className="course-header">
+                  <article style={{ display: "flex" }}>
+                
+                    <Input
+                      name="title"
+                      value={title}
+                      onChange={this.changeName}
+                    />
+           
+                    <FontAwesome
+                      onClick={() => this.saveCourse(course, true)}
+                      name="share-square"
+                      size="2x"
+                      style={{
+                        cursor: "pointer",
+                        color: "#ccc",
+                        marginLeft: 5,
+                        textShadow: "0 1px 0 rgba(0, 0, 0, 0.1)"
+                      }}
+                    />
+                  </article>
+                  <br/>
+                  <Button className="boton" onClick={this.addModule}>
+                    Agregar módulo
+                  </Button>
+                 
+                </nav>
+                <br/>
+                <div className="modules-container">
+                  <article>
+                    <input
+                      onChange={this.previewImage}
+                      ref={input => (this.input = input)}
+                      hidden
+                      type="file"
+                    />
+                    <img
+                      style={{ width: 300, cursor: "pointer" }}
+                      onClick={() => this.input.click()}
+                      src={badge}
+                      alt="preview"
+                    />
+                  </article>
 
-                {modulesOrder &&
-                  modulesOrder.map((moduleId, index) => {
-                    const module = modules[moduleId];
-                    const { materials = {}, materialsIds = [] } = module;
-                    const mats = materialsIds.map(id => materials[id]);
+                  {modulesOrder &&
+                    modulesOrder.map((moduleId, index) => {
+                      const module = modules[moduleId];
+                      const { materials = {}, materialsIds = [] } = module;
+                      const mats = materialsIds.map(id => materials[id]);
 
-                    return (
-                      <Module
-                        courseId={course._id}
-                        removeResource={this.removeResource}
-                        addResource={this.addResource}
-                        removeModule={this.removeModule}
-                        onChange={this.onChangeModuleTitle}
-                        editModuleTitle={this.state.editModuleTitle}
-                        onEdit={this.onEditModuleTitle}
-                        index={index}
-                        key={module._id}
-                        {...module}
-                        materials={mats}
-                      />
-                    );
-                  })}
+                      return (
+                        <Module
+                          courseId={course._id}
+                          removeResource={this.removeResource}
+                          addResource={this.addResource}
+                          removeModule={this.removeModule}
+                          onChange={this.onChangeModuleTitle}
+                          editModuleTitle={this.state.editModuleTitle}
+                          onEdit={this.onEditModuleTitle}
+                          index={index}
+                          key={module._id}
+                          {...module}
+                          materials={mats}
+                        />
+                      );
+                    })}
+                </div>
+                {provided.placeholder}
               </div>
-              {provided.placeholder}
-            </div>
-          )}
-        </Droppable>
-      </DragDropContext>
+            )}
+          </Droppable>
+        </DragDropContext>
+      </div>
     );
   }
 }

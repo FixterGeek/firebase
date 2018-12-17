@@ -1,10 +1,82 @@
+/* admin */
+
+.admin-courses{
+    background-color: #181818;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.wlc{
+    background-color: #222222;
+    font-family: 'Muli', sans-serif;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.content{
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.add{
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,.2)
+}
+.add h2{
+    color:rgba(255,255,255,.5);
+    font-family: 'Muli', sans-serif;
+}
+.btn-add{
+    background-color: #ffa711;
+    border: 1px solid #ffa711;
+    color:white;
+    margin: 5px 20px;
+    height:40px;
+    width:150px;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.flx{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* DetaileCourse */
+.contain-new{
+    background-color: #181818;
+    padding: 0 0 50px 0;
+    min-height: 100vh;
+}
+
+.course-header{
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.boton{
+    background-color: #ffa711 !important;
+    width: 100%;
+    color:white !important;
+    border: 1px solid #ffa711 !important;
+}
 .modules-container{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
+    
 }
 
 .module-item{
@@ -31,9 +103,9 @@
 
 .resource-item:active{
     cursor: grabbing;
+
 }
 
-
 .dragging{
-    background-color: lightgreen;
+    background-color:pink!important;
 }

@@ -148,8 +148,18 @@
     opacity: .3;
     margin: 0 15px;
 }
+.btn-movil{
+    display: inherit;
+}
 @media(max-width: 435px){
+    .btn-movil{
+        
+        display: none;
+    }
     .none{
         display: none;
+    }
+    .nav div{
+        margin-right: 5px;
     }
 }

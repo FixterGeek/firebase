@@ -40,9 +40,9 @@ class Footer extends Component {
                         </a>
                     </div>
                 </div>
-                <div className="copy" >
-                    <p>Copyright © 2016 - 2018 FirebaseMx All rights reserved
-                    </p>
+                <div className="copy">
+                    <span>Copyright © 2016 - 2018 FirebaseMx All rights reserved
+                    </span>
                 </div>
             </div>
         );
