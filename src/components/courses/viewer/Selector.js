@@ -1,12 +1,21 @@
 import React from "react";
-import Lesson from "./Lesson";
+import Module from "./Module";
 
 const promo =
 	"https://duyt4h9nfnj50.cloudfront.net/sku/6e256406dc5c802ddd8f0d23adb792f3";
 const img =
 	"https://d2eip9sf3oo6c2.cloudfront.net/series/square_covers/000/000/264/thumb/EGH_ReactHooks_Final_%281%29.png";
 
-const Selector = ({ badge, courseTitle, className, promoImage }) => {
+const Selector = ({
+	modules,
+	modulesOrder,
+	title,
+	badge,
+	courseTitle,
+	className,
+	promoImage,
+	onSelect
+}) => {
 	return (
 		<div className={className}>
 			<div className="lessons-ad-card">
@@ -28,11 +37,13 @@ const Selector = ({ badge, courseTitle, className, promoImage }) => {
 					src={badge || img}
 					alt="promo"
 				/>
-				<h2>{courseTitle || "Reusable state and effects with React hooks"}</h2>
+				<h2 style={{ marginLeft: 10 }}>
+					{title || "Reusable state and effects with React hooks"}
+				</h2>
 			</div>
 			<div className="lessons-scrollable">
-				{[1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 1, 1, 1].map((e, i) => (
-					<Lesson key={i} {...e} />
+				{modulesOrder.map((id, i) => (
+					<Module onSelect={onSelect} index={i} key={i} module={modules[id]} />
 				))}
 			</div>
 		</div>

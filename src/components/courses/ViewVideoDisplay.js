@@ -62,7 +62,12 @@ export class ViewVideoDisplay extends React.Component {
 		const { modules, modulesOrder } = course;
 		return (
 			<div className="viewer-container">
-				<Lessons link={currentVideoLink} />
+				<Lessons
+					onSelect={this.changeVideo}
+					moduleId={moduleId}
+					course={course}
+					link={currentVideoLink}
+				/>
 				<Materials />
 			</div>
 		);
