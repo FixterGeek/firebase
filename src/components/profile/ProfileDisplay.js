@@ -24,19 +24,24 @@ export const ProfileDisplay = ({ user = {} }) => {
                         <Card key={index} {...user.enrolled[c]} />
                     )
                 })} */}
-					{enrolled.length < 1 && (
-						<h2 style={{ color: "white" }}>
-							<Link to="/courses">
-								<Button style={{ background: "black", color: "white" }}>
-									Consigue tu primer curso
-								</Button>
-							</Link>
-						</h2>
-					)}
+                {enrolled.length < 1 && 
+                <h2 style={{color:"white"}}>
+                <Link to="/courses" >
+                    <Button style={{background:'transparent', color:"white", opacity:".5"}} >
+                        Consigue tu primer curso
+                    </Button>
+                </Link>
+                
+                
+                </h2>}
 
-					<div className="cursos_box" />
-				</div>
-			</div>
-		</div>
+                <div className="cursos_box">
+
+                </div>
+                </div>
+            </div>
+    
+        </div>
+
 	);
 };

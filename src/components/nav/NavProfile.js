@@ -39,6 +39,7 @@ class NavProfile extends Component {
         return (
             <div className="nav-perfil">
                 <div className="flexin">
+                
                     <Link to="/">
                         <img src={logo} alt="logo"/>
                     </Link>
@@ -48,6 +49,8 @@ class NavProfile extends Component {
                     </div>
                 </div>
                 <div className="user_nav">
+              
+                    <hr/>
                     <p>{displayName}</p>
                     <div className="img_nav">
                         <img src={photoURL || pic} alt={displayName}/>

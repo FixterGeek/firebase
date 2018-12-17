@@ -72,6 +72,10 @@
 .st{
     color:#ffa711;
 }
+.perfil .ant-btn:hover, .ant-btn:focus{
+    border-color: #ffa711;
+}
+
 @media(max-width: 435px){
     .perfil .fl{
         width: 100%;
@@ -82,5 +86,8 @@
     }
     .cursos_box{
         justify-content: center;
+    }
+    .profile_cursos{
+        text-align: center;
     }
 }
