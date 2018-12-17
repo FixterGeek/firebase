@@ -5,15 +5,12 @@
 .card{
     background-color: #222;
     min-width: 280px;
-    max-width: 300px;
+    max-width: 280px;
     flex-grow: 1;
     margin: 15px 10px;
     border-radius: 5px;
     height:280px;
     box-shadow:0 2px 8px rgba(0,0,0,.09);
-    /*
-    border: 1px solid #e8e8e8;
-    */
     cursor: pointer;
     padding: 2%;
     box-sizing: border-box;
@@ -40,6 +37,11 @@
     font-family: Helvetica;
     font-weight: bolder;
     color:white;
+    margin-bottom: 0;
+}
+.body-card{
+    height: 210px;
+
 }
 .data{
     display: flex;

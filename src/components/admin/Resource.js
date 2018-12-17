@@ -38,7 +38,7 @@ class Resource extends React.Component{
                             className='super-crazy-colors'
                             name='trash'
                             size='2x'
-                            style={{ cursor:"pointer", color:'red', marginLeft:5, textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+                            style={{ cursor:"pointer", color:'#cccccc', marginLeft:5, textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
                         />
                     </div>
                 )}

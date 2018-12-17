@@ -23,6 +23,7 @@ class Courses extends Component {
             <div className="cursos">
                 <h2 className="titulo">Últimos lanzamientos</h2>
                 <div className="flex center">
+                
                     {courses.map(c=><Card key={c._id} {...c} />)}
                 </div>
                 <Link to="/courses">

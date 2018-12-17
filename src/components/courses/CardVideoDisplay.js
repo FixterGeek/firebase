@@ -8,8 +8,9 @@ export const CardVideo = ({duration, title, index, courseId, _id, moduleId}) => 
     duration = Number(duration)
     const min = Math.floor(duration / 60)
     if(min < 1) {
-        metric = "sec"
+        metric = "segundos"
         duration = duration.toPrecision(4)
+
     }else{
         duration = min
     }
@@ -23,7 +24,7 @@ return (
                 </div>
                 <div className="date_video">
                     <h4>{title}</h4>
-                    <p>{duration}{metric}</p>
+                    <p>{duration} {metric}</p>
                 </div>
             </div>
         </Link>

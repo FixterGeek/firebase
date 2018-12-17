@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom'
 import { Button } from 'antd';
 
 const desc = "JavaScript is the most widely deployed language in the world. Whether you’re interested in writing front-end client side code, back-end code for servers, or even game development..."
+const img = "http://www.stickpng.com/assets/images/5847f40ecef1014c0b5e488a.png"
 
 function getDuration(modules){
     let lessons = 0
@@ -24,7 +25,7 @@ function getDuration(modules){
 
 }
 
-export const CourseDetailDisplay = ({loading, enroll, title, _id, author={}, modules, modulesOrder=[], description, isEnrolled, enrolled={}}) => {
+export const CourseDetailDisplay = ({loading, enroll, title, _id, author={}, modules, modulesOrder=[], description, badge , isEnrolled, enrolled={}}) => {
 const [secons, lessons] = getDuration(modules)
 //console.log(modulesOrder, modules)
 // const user = JSON.parse(localStorage.getItem('user'))
@@ -40,7 +41,7 @@ return (
                 <div className="fl_curso">
                     <div className="cursi">
                     <div className="logo_curso">
-                        <img src="http://www.stickpng.com/assets/images/5847f40ecef1014c0b5e488a.png" alt=""/>
+                        <img src={badge || img} alt=""/>
                     </div>
                     <div className="data_curso">
                         <h2 className="tittle">{title}</h2>
