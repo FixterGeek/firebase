@@ -26,9 +26,58 @@ var conekta = require("conekta");
 admin.initializeApp(config);
 
 /*
-estoy en la version anterior y tengo una mezcla 
-de cosas porque inicializo con la nueva pero el snap es dle viejo =S
+estoy en la version anterior y tengo una mezcla
+de cosas porque inicializo con la nueva pero el snap es del viejo =S
 */
+
+
+/***
+	Manejando el éxito del pago de paypal y
+ actualizando al usuario y al curso
+***/
+exports.handlePaypalSuccess = functions.https.onRequest((req, res) => {
+	cors(req, res, () => {
+		const {userId, courseId} = req.body;
+		const user = admin.firestore().collection("users").doc(`${userId}`);
+		const course = admin.firestore().collection("courses").doc(`${courseId}`);
+		Promise.all([user.get(),  course.get()])
+			.then(result=>{
+				const u = result[0].data();
+				const c = result[1].data();
+				if(!c.enrolled) c.enrolled= {};
+				if(!u.enrolled) u.enrolled= {};
+				c.enrolled[u._id] = true;
+				u.enrolled[c._id] = true;
+				course.set(c);
+				user.set(u);
+				return res.status(200).send(u)
+			})
+			.catch(e=>{
+				return res.status(500).send(e)
+			})
+	})
+});
+
+exports.enrollUser = functions.database.ref('/orders/{userId}/{pushId}')
+    .onCreate((snap, context) => {
+       // Grab the current value of what was written to the Realtime Database.
+    //   console.log('test', snap.data.val())
+    //   console.log('snap', snap)
+      const {userId} = snap.params
+      const {courseId} = snap.data.val()
+      console.log('user', userId)
+      console.log('curso',courseId)
+    //   // You must return a Promise when performing asynchronous tasks inside a Functions such as
+    //   // writing to the Firebase Realtime Database.
+    //   // Setting an "uppercase" sibling in the Realtime Database returns a Promise.
+    //   //return snapshot.ref.parent.child('uppercase').set(uppercase);
+      return admin.database().ref('/cursos')
+        .child(courseId)
+        .child('enrolled')
+        .child(userId)
+        .set(true)
+        .then(()=>true)
+    });
 
 exports.enrollUser = functions.database
 	.ref("/orders/{userId}/{pushId}")

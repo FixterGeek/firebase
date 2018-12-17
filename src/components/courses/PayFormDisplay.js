@@ -4,6 +4,10 @@ import Nav from '../nav/Nav';
 import log from '../../assets/bootcamp.png';
 import {Spin} from 'antd'
 import Cleave from 'cleave.js/react';
+import PaypalButton from './PaypalButton';
+import toastr from 'toastr';
+
+import './PayFormDisplay.css';
 
 
 let cupon = ''
@@ -18,9 +22,27 @@ function onCreditCardChange(event) {
     console.log(event.target.rawValue);
 }
 
-export const PayFormDisplay= ({course, pagar, onChange, errors, loading, applyCupon}) => {
+let CLIENT = {
+	sandbox: 'AYBxcD07b04dFGPyuYwku2x_xmAZURiROXO_lPD01U8m-colu58D9T1HM1SSgm1hnBnCj8RwWxyuHwLk',
+		production: '<insert production client id>'
+};
+
+let ENV = 'sandbox';
+
+export const PayFormDisplay= ({course, pagar, onChange, errors, loading, applyCupon, HandlePaypalSuccess}) => {
     let {coupon={}, price} = course
-    let total = Number(price) - 250 
+    let total = Number(price) - 250
+
+	const onSuccess = () => {
+		HandlePaypalSuccess();
+	};
+
+	const onError = (error) => {
+		toastr.error("Error al procesar el pago");
+	};
+
+	const onCancel = () => toastr.error("Proceso cancelado");
+
     return(
     <div className="pay">
         <Nav />
@@ -69,6 +91,25 @@ export const PayFormDisplay= ({course, pagar, onChange, errors, loading, applyCu
                         </span>
 
                     </form>
+
+									<div>
+										<h3 className="payment-methods--title">Otras formas de pago</h3>
+
+										<div>
+											<PaypalButton
+												client={CLIENT}
+												env={ENV}
+												commit={true}
+												currency={'MXN'}
+												total={ !coupon.discount ? total : coupon.percentage ?  total * (1 - coupon.discount * .01)  : total - coupon.discount }
+												onSuccess={onSuccess}
+												onError={onError}
+												onCancel={onCancel}
+											/>
+										</div>
+
+									</div>
+
                 </div>
                 <div className="summary">
                     <div className="img_pay">
