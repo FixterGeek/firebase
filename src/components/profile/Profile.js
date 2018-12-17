@@ -19,8 +19,7 @@ class Profile extends Component {
     }
 
     render() {
-        const {user} = this.state
-        console.log(user)
+        const {user} = this.state;
         return (
             <div className="profile">
                 <ProfileDisplay user={user} />

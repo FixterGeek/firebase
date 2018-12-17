@@ -21,10 +21,36 @@ admin.initializeApp(config);
 
 /*
 estoy en la version anterior y tengo una mezcla 
-de cosas porque inicializo con la nueva pero el snap es dle viejo =S
+de cosas porque inicializo con la nueva pero el snap es del viejo =S
 */
 
 
+/***
+	Manejando el éxito del pago de paypal y
+ actualizando al usuario y al curso
+***/
+exports.handlePaypalSuccess = functions.https.onRequest((req, res) => {
+	cors(req, res, () => {
+		const {userId, courseId} = req.body;
+		const user = admin.firestore().collection("users").doc(`${userId}`);
+		const course = admin.firestore().collection("courses").doc(`${courseId}`);
+		Promise.all([user.get(),  course.get()])
+			.then(result=>{
+				const u = result[0].data();
+				const c = result[1].data();
+				if(!c.enrolled) c.enrolled= {};
+				if(!u.enrolled) u.enrolled= {};
+				c.enrolled[u._id] = true;
+				u.enrolled[c._id] = true;
+				course.set(c);
+				user.set(u);
+				return res.status(200).send(u)
+			})
+			.catch(e=>{
+				return res.status(500).send(e)
+			})
+	})
+});
 
 exports.enrollUser = functions.database.ref('/orders/{userId}/{pushId}')
     .onCreate((snap, context) => {

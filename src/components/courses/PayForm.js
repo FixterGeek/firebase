@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Courses.css';
 import {PayFormDisplay} from './PayFormDisplay';
-import firebase, {paymentAccepted, getCourseInfo, applyCoupon} from '../../services/firebase';
+import firebase, {paymentAccepted, getCourseInfo, applyCoupon, paypalPaymentSuccess} from '../../services/firebase';
 import toastr from 'toastr'
 //import * as Conekta from '../../services/conekta'
 import Conekta, {makeOrder} from '../../services/conekta'
@@ -129,7 +129,20 @@ class PayForm extends Component {
         //     console.log(e)
         //     toastr.error(e)
         // })
-    }
+    };
+
+    // manejando el éxito al pagar con paypal
+    HandlePaypalSuccess = () => {
+    	const data = {
+    		courseId: this.props.match.params.id,
+				userId: this.state.user.uid
+			};
+			paypalPaymentSuccess(data)
+				.then( () => {
+					toastr.success("Pago procesado con éxito");
+					this.props.history.push('/profile');
+				});
+		};
 
     applyCupon = (cupon) => {
         this.setState({loading:true})
@@ -163,6 +176,7 @@ class PayForm extends Component {
                     onChange={this.onChange}
                     errors={errors}
                     applyCupon={this.applyCupon}
+										HandlePaypalSuccess={this.HandlePaypalSuccess}
                 />
             </div>
         );

@@ -238,7 +238,20 @@ const config = {
 
    // return enrollUser(data)
   }
-  // cambiar status de orden
+
+
+/***
+ * Mandando la data a cloud functions
+ ***/
+
+export const paypalPaymentSuccess = (data) => {
+	return axios.post("https://us-central1-reactfirebase-b16aa.cloudfunctions.net/handlePaypalSuccess", data)
+		.then(res => res.data)
+		.catch(err => err.response);
+};
+
+
+// cambiar status de orden
   // reembolso
   // asignar ordenes a usuario
   // enrolar usuario
