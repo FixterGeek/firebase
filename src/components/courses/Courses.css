@@ -422,6 +422,8 @@ viewer-container {
 	transform: translateY(15px);
 	height: 20px;
 	overflow: hidden;
+	width: 20px;
+	margin: 0 20px;
 }
 
 .lesson-card:hover .lesson-icon img {
@@ -447,4 +449,20 @@ viewer-container {
 	.viewer-lessons video {
 		flex: 3;
 	}
+}
+
+/* modules */
+
+.lessons-module-card {
+	color: white;
+	background-color: #323439;
+	width: 100%;
+	padding: 5px 10px;
+	display: flex;
+	overflow: hidden;
+	transition: all 0.3s ease;
+	flex-direction: column;
+}
+.lessons-module-card h4 {
+	color: white;
 }
