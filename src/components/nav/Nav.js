@@ -34,7 +34,7 @@ const menu = (
 
 class Nav extends Component {
 
-    state:{
+    state= {
         user:null
     };
 
@@ -45,8 +45,12 @@ class Nav extends Component {
     }
 
     render() {
-        const {user} = this.state
-        const {displayName, photoURL} = user
+        let {user} = this.state
+        let displayName, photoURL
+        if(user)  {
+            displayName=user.displayName
+             photoURL =user.photoURL
+        }
         return (
             <div className="nav">
                 <Link to="/">
