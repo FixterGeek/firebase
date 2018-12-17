@@ -5,6 +5,7 @@ import { Button } from 'antd';
 import toastr from 'toastr';
 import './styles.css';
 import CardAdmin from "../card/CardAdmin";
+import logo from "../../assets/firemx.png";
 
 class CoursePage extends Component{
 
@@ -36,6 +37,9 @@ class CoursePage extends Component{
         return(
             <div className="admin-courses">
                 <div className="wlc">
+                <Link to="/">
+                    <img className="logi" src={logo} alt="logo"/>
+                </Link>
                     <h2 style={{color:"white", opacity:".5", marginBottom:"0"}}>Bienvenido al panel de FirebaseMx</h2>
                 </div>
                 <div className="content">

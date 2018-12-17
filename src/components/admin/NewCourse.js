@@ -3,8 +3,10 @@ import { Module } from "./Module";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import firebase, { saveCourse, getCourse } from "../../services/firebase";
 import { Button, Input } from "antd";
+import { Link} from 'react-router-dom';
 import FontAwesome from "react-fontawesome";
 import toastr from "toastr";
+import logo from '../../assets/firemx.png';
 import "./styles.css";
 
 const preview =
@@ -233,6 +235,9 @@ class NewCourse extends Component {
     return (
       <div className="contain-new">
         <div className="wlc">
+          <Link to="/admin/courses">
+                    <img className="logi" src={logo} alt="logo"/>
+          </Link>
            <h2 style={{color:"white", opacity:".5", marginBottom:"0"}}>Agrega / Edita el curso</h2>
         </div> 
         <DragDropContext onDragEnd={this.onDragEnd}>
