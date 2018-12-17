@@ -26,26 +26,25 @@ const pic = "https://scontent.fmex6-1.fna.fbcdn.net/v/t1.0-9/29388325_1573144522
 
 class Card extends Component {
     render() {
-        const {title, modulesOrder, author={}, modules, _id} = this.props
+        const {title, modulesOrder, author={}, modules, _id, badge} = this.props
         const {displayName, photoURL} = author
         const [secons, lessons] = getDuration(modules)
         return (
 
                 <div className="card"> <Link to={`/courses/${_id}`} >
-                    <div className="container_img">
-                        <Tooltip title="Al concluir el curso descargaras tu certificado">
-                            <img src={batch} alt=""/>
-                        </Tooltip>,
+                    <div className="body-card">
+                        <div className="container_img">
+                            <Tooltip title="Al concluir el curso descargaras tu certificado">
+                                <img src={badge} alt=""/>
+                            </Tooltip>
+                        </div>
 
-                        <img src={cover} alt={title}/>
+                        <p className="clase">Course &bull; Firebase</p>
+
+                        <h3>{title}</h3>
                     </div>
-
-                    <p className="clase">Course &bull; Firebase</p>
-
-                    <h3>{title}</h3>
-                    <br/>
                     <hr className="line-gris"/>
-
+                   
                     <div className="data">
                         <div style={{display:"flex"}}>
                             <img className="autor_img" src={photoURL || pic} alt={displayName}/>
@@ -54,7 +53,7 @@ class Card extends Component {
                                 <p className="duracion">{lessons} lecciones &bull; {Math.floor(secons / 60)} minutos</p>
                             </div>
                         </div>
-                        <FontAwesome style={{color:"#bdbfc2"}} name="cog"/>
+                        <FontAwesome style={{color:"#bdbfc2"}} name="fire"/>
 
                     </div>
                 </Link>

@@ -32,19 +32,21 @@ export const Module = ({courseId,removeResource, addResource,removeModule,onChan
                         </div>
                         : 
                         <div>
-                        <a onClick={onEdit} >Editar</a>
+                        <a onClick={onEdit} style={{color:"#ccc"}} >
+                        <span >  Editar</span>
+                        </a>
                         <FontAwesome
                             onClick={()=>removeModule(_id)}
                             className='super-crazy-colors'
                             name='trash'
                             size='2x'
-                            style={{ cursor:"pointer", color:'red', marginLeft:5, textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+                            style={{ cursor:"pointer", color:'#cccccc', marginLeft:5, textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
                         />
                         <FontAwesome
                             className='super-crazy-colors'
                             name='minus-square'
                             size='2x'
-                            style={{ cursor:"drag", color:'orange', marginLeft:5, textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
+                            style={{ cursor:"drag", color:'#ffa711', marginLeft:5, textShadow: '0 1px 0 rgba(0, 0, 0, 0.1)' }}
                             {...provided.dragHandleProps}
                         />
                         </div>} 

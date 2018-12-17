@@ -10,7 +10,7 @@ class About extends Component {
                     <div className="about_text">
                         <h2 className="titulo">What it is?</h2>
                         <hr className="line_white"/>
-                        <p style={{fontSize:"18px"}}>
+                        <p >
                             La tecnología se mueve tan rápido, que en ocasiones,
                             a pesar de la pasión u curiosidad que sientes por ella,
                             es difícil aprender y actualizarse debido a la gran
@@ -18,7 +18,7 @@ class About extends Component {
                             libros, y a lo dispersa que esta información se
                             encuentra.
                         </p>
-                        <p style={{fontSize:"18px"}}>
+                        <p >
                             Es por eso que en FirebaseMx decidimos desarrollar
                             “FirebaseMx Learning Platform”, una plataforma única
                             en donde encontraras cursos, ejercicios y artículos

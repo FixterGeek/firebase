@@ -7,7 +7,8 @@ import queryString from 'query-string'
 
 class Login extends Component {
 
-    componentWillMount(){
+    componentDidMount () {
+        window.scroll(0, 0)
         this.getUser()
     }
 

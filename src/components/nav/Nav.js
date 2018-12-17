@@ -9,6 +9,9 @@ import { Menu, Dropdown,
 
 const pic = "https://secure.meetupstatic.com/photos/event/d/6/f/5/600_465595029.jpeg"
 
+const closeSession = () => {
+    localStorage.removeItem('user')
+}
 const menu = (
     <Menu>
         <Menu.Item key="0">
@@ -27,9 +30,7 @@ const menu = (
     </Menu>
 );
 
-const closeSession = () => {
-    localStorage.removeItem('user')
-}
+
 
 class Nav extends Component {
 
@@ -49,11 +50,11 @@ class Nav extends Component {
         return (
             <div className="nav">
                 <Link to="/">
-                    <img src={logo} alt="logo"/>
+                    <img className="logo" src={logo} alt="logo"/>
                 </Link>
                 <div>
                     <Link to="/courses">
-                        <button>Empezar</button>
+                        <button className="btn-movil">Explorar</button>
                     </Link>
                     <hr/>
                     {!user ? <Link to="/login">
