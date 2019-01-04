@@ -23,11 +23,13 @@ function onCreditCardChange(event) {
 }
 
 let CLIENT = {
-	sandbox: 'AYBxcD07b04dFGPyuYwku2x_xmAZURiROXO_lPD01U8m-colu58D9T1HM1SSgm1hnBnCj8RwWxyuHwLk',
-		production: '<insert production client id>'
+	sandbox: process.env.REACT_APP_PAYPAL_CLIENT_ID_SANDBOX,
+	production: process.env.REACT_APP_PAYPAL_CLIENT_ID_PRODUCTION
 };
 
-let ENV = 'sandbox';
+const ENV = process.env.NODE_ENV === 'production'
+	? 'production'
+	: 'sandbox';
 
 export const PayFormDisplay= ({course, pagar, onChange, errors, loading, applyCupon, HandlePaypalSuccess}) => {
     let {coupon={}, price} = course

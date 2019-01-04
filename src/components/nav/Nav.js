@@ -44,20 +44,10 @@ class Nav extends Component {
 		user: null
 	};
 
-<<<<<<< HEAD
-    state= {
-        user:null
-    };
-
-    componentWillMount() {
-        const user = JSON.parse(localStorage.getItem('user'))
-        this.setState({user})
-=======
 	componentWillMount() {
 		const user = JSON.parse(localStorage.getItem("user"));
 		this.setState({ user });
 	}
->>>>>>> 30b2b09b66bb1072a40d0eff699e2e8ffbbcc54d
 
 	render() {
 		const { user } = this.state;
@@ -67,41 +57,6 @@ class Nav extends Component {
 			photoURL = user.photoURL;
 		}
 
-<<<<<<< HEAD
-    render() {
-        let {user} = this.state
-        let displayName, photoURL
-        if(user)  {
-            displayName=user.displayName
-             photoURL =user.photoURL
-        }
-        return (
-            <div className="nav">
-                <Link to="/">
-                    <img className="logo" src={logo} alt="logo"/>
-                </Link>
-                <div>
-                    <Link to="/courses">
-                        <button className="btn-movil">Explorar</button>
-                    </Link>
-                    <hr/>
-                    {!user ? <Link to="/login">
-                        <span>Log in</span>
-                    </Link>:
-                        <div className="user_nav">
-                            <p>{displayName}</p>
-                            <div className="img_nav">
-                                <img src={photoURL || pic} alt={displayName}/>
-                            </div>
-                            <Dropdown overlay={menu} trigger={['click']}>
-                                <FontAwesome name="angle-down"/>
-                            </Dropdown>
-                        </div>}
-                </div>
-            </div>
-        );
-    }
-=======
 		return (
 			<div className="nav">
 				<Link to="/">
@@ -131,7 +86,6 @@ class Nav extends Component {
 			</div>
 		);
 	}
->>>>>>> 30b2b09b66bb1072a40d0eff699e2e8ffbbcc54d
 }
 
 export default Nav;
